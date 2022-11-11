@@ -111,9 +111,9 @@ if(!isset($_SESSION["user"]))
                     <li>
                         <a  href="home.php"><i class="fa fa-dashboard"></i> Status</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="messages.php"><i class="fa fa-desktop"></i> News Letters</a>
-                    </li>
+                    </li> -->
 					<li>
                         <a class="active-menu" href="roombook.php"><i class="fa fa-bar-chart-o"></i> Room Booking</a>
                     </li>
@@ -177,7 +177,7 @@ if(!isset($_SESSION["user"]))
                                             <th><?php echo $email; ?> </th>
                                             
                                         </tr>
-										<tr>
+										<!-- <tr>
                                             <th>Nationality </th>
                                             <th><?php echo $nat; ?></th>
                                             
@@ -185,7 +185,7 @@ if(!isset($_SESSION["user"]))
 										<tr>
                                             <th>Country </th>
                                             <th><?php echo $country;  ?></th>
-                                            
+                                             -->
                                         </tr>
 										<tr>
                                             <th>Phone No </th>
@@ -248,7 +248,7 @@ if(!isset($_SESSION["user"]))
 										<div class="form-group">
 														<label>Select the Conformation</label>
 														<select name="conf"class="form-control">
-															<option value selected>	</option>
+															<option value selected>Decline</option>
 															<option value="Conform">Conform</option>
 															
 															

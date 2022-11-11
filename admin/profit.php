@@ -71,9 +71,9 @@ if(!isset($_SESSION["user"]))
                     <li>
                         <a href="home.php"><i class="fa fa-dashboard"></i> Status</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a  href="messages.php"><i class="fa fa-desktop"></i> News Letters</a>
-                    </li>
+                    </li> -->
 					<li>
                         <a href="roombook.php"><i class="fa fa-bar-chart-o"></i>Room Booking</a>
                     </li>
@@ -172,11 +172,11 @@ if(!isset($_SESSION["user"]))
 													<td>".$row['cout']."</td>
 													
 													
-													<td>$".$row['ttot']."</td>
-													<td>$".$row['mepr']."</td>
-													<td>$".$row['btot']."</td>
-													<td>$".$row['fintot']."</td>
-													<td>$".$row['fintot']*10/100 ."</td>
+													<td>Rs.".$row['ttot']."</td>
+													<td>Rs.".$row['mepr']."</td>
+													<td>Rs.".$row['btot']."</td>
+													<td>Rs.".$row['fintot']."</td>
+													<td>Rs.".$row['fintot']*10/100 ."</td>
 													</tr>";
 											}
 											else
@@ -189,11 +189,11 @@ if(!isset($_SESSION["user"]))
 													<td>".$row['cout']."</td>
 													
 													
-													<td>$".$row['ttot']."</td>
-													<td>$".$row['mepr']."</td>
-													<td>$".$row['btot']."</td>
-													<td>$".$row['fintot']."</td>
-													<td>$".$row['fintot']*10/100 ."</td>
+													<td>Rs.".$row['ttot']."</td>
+													<td>Rs.".$row['mepr']."</td>
+													<td>Rs.".$row['btot']."</td>
+													<td>Rs.".$row['fintot']."</td>
+													<td>Rs.".$row['fintot']*10/100 ."</td>
 													</tr>";
 											
 											}
