@@ -248,13 +248,13 @@ if(!isset($_SESSION["user"]))
 										<div class="form-group">
 														<label>Select the Conformation</label>
 														<select name="conf"class="form-control">
-															<option value selected>Decline</option>
-															<option value="Conform">Conform</option>
+															<option value selected value="1">Decline</option>
+															<option value="2">Conform</option>
 															
 															
 														</select>
 										 </div>
-							<input type="submit" name="co" value="Conform" class="btn btn-success">
+							<input type="submit" name="co"  class="btn btn-success">
 							
 							</form>
                         </div>
@@ -456,30 +456,34 @@ if(!isset($_SESSION["user"]))
 </html>
 
 <?php
+//echo each item in $_POST
+
+
+
 						if(isset($_POST['co']))
 						{	
 							$st = $_POST['conf'];
 							
 							 
 							
-							if($st=="Conform")
+							if($st=="2")
 							{
 									$urb = "UPDATE `roombook` SET `stat`='$st' WHERE id = '$id'";
 									
-								if($f1=="NO" )
+								if($troom=="Superior Room" AND $f1=="NO" )
 								{
 									echo "<script type='text/javascript'> alert('Sorry! Not Available Superior Room ')</script>";
 								}
-								else if($f2 =="NO")
+								else if($troom=="Guest House" AND $f2 =="NO")
 									{
 										echo "<script type='text/javascript'> alert('Sorry! Not Available Guest House')</script>";
 										
 									}
-									else if ($f3 == "NO")
+									else if ($troom=="Single Room" AND $f3 == "NO")
 									{
 										echo "<script type='text/javascript'> alert('Sorry! Not Available Single Room')</script>";
 									}
-										else if($f4=="NO")
+										else if($troom=="Deluxe Room" AND $f4=="NO")
 										{
 										echo "<script type='text/javascript'> alert('Sorry! Not Available Deluxe Room')</script>";
 										}
@@ -574,10 +578,19 @@ if(!isset($_SESSION["user"]))
 									
                                         
 							}	
-					
+					else
+						//detlete booking form roombook table
+						$del = "DELETE FROM `roombook` WHERE `id`='$id'";
+						if(mysqli_query($con,$del))
+						{
+							echo "<script type='text/javascript'> alert('Booking Cancel')</script>";
+							echo "<script type='text/javascript'> window.location='roombook.php'</script>";
+
+						
+						
 						}
 					
 									
-									
+					}		
 							
 						?>
