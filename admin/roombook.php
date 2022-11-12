@@ -488,8 +488,8 @@ if(!isset($_SESSION["user"]))
 										
 										else if( mysqli_query($con,$urb))
 											{	
-												//echo "<script type='text/javascript'> alert('Guest Room booking is conform')</script>";
-												//echo "<script type='text/javascript'> window.location='home.php'</script>";
+												echo "<script type='text/javascript'> alert('Guest Room booking is conform')</script>";
+												echo "<script type='text/javascript'> window.location='home.php'</script>";
 												 $type_of_room = 0;       
 														if($troom=="Superior Room")
 														{
