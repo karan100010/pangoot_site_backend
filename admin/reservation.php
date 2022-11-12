@@ -212,13 +212,12 @@ include('db.php')
 									$check="SELECT * FROM roombook WHERE email = '$_POST[email]' AND cin = '$_POST[cin]'";
 									$rs = mysqli_query($con,$check);
 									$data = mysqli_fetch_array($rs, MYSQLI_NUM);
-									if(!is_null($data[0]))
-                                    {
+									
                                     if($data[0] > 10) {
                                     //kj changed this from 1 to 10
 										echo "<script type='text/javascript'> alert('User Already in Exists $data')</script>";										
 									}
-                                }
+                                
 									else
 									{
 										$new ="Not Conform";

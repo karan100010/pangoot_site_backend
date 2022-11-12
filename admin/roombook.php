@@ -410,7 +410,7 @@ if(!isset($_SESSION["user"]))
 							</tr>
 						</table>
 						
-						
+						s
 						
                         
 						
@@ -562,7 +562,10 @@ if(!isset($_SESSION["user"]))
 														
 														if(mysqli_query($con,$psql))
 														{	$notfree="NotFree";
-															$rpsql = "UPDATE `room` SET `place`='$notfree',`id`='$id' where bedding ='$bed' and type='$troom' ";
+															//update only the firest instence of $rpsql
+
+											
+															$rpsql = "UPDATE `room` SET `place`='$notfree',`cusid`='$id' where bedding ='$bed' and type='$troom' LIMIT $nroom";
 															if(mysqli_query($con,$rpsql))
 															{
 															echo "<script type='text/javascript'> alert('Booking Conform')</script>";
