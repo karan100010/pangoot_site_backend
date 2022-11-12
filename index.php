@@ -4,7 +4,7 @@ include('db.php');
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>SUNRISE HOTEL</title>
+<title>LASERENE THE COTTAGE</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -38,8 +38,8 @@ include('db.php');
 			</div>
 			<div class="contact-bnr-w3-agile">
 				<ul>
-					<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">INFO@SUNRISE.COM</a></li>
-					<li><i class="fa fa-phone" aria-hidden="true"></i>+94 (65)222-44-55</li>	
+					<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">info@laserenethecottage.com</a></li>
+					<li><i class="fa fa-phone" aria-hidden="true"></i>+91 - 8630690077 / +91 - 9318321161</li>	
 					<li class="s-bar">
 						<div class="search">
 							<input class="search_box" type="checkbox" id="search_box">
@@ -66,7 +66,7 @@ include('db.php');
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<h1><a class="navbar-brand" href="index.php">SUN <span>RISE</span><p class="logo_w3l_agile_caption">Your Dreamy Resort</p></a></h1>
+					<h1><a class="navbar-brand" href="index.php">LASERENE <span>THE COTTAGE</span><p class="logo_w3l_agile_caption">Your Dreamy Cottage</p></a></h1>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
@@ -74,9 +74,9 @@ include('db.php');
 						<ul class="nav navbar-nav menu__list">
 							<li class="menu__item menu__item--current"><a href="" class="menu__link">Home</a></li>
 							<li class="menu__item"><a href="#about" class="menu__link scroll">About</a></li>
-							<li class="menu__item"><a href="#team" class="menu__link scroll">Team</a></li>
+							<!-- <li class="menu__item"><a href="#team" class="menu__link scroll">Team</a></li> -->
 							<li class="menu__item"><a href="#gallery" class="menu__link scroll">Gallery</a></li>
-							<li class="menu__item"><a href="#rooms" class="menu__link scroll">Rooms</a></li>
+							<!-- <li class="menu__item"><a href="#rooms" class="menu__link scroll">Rooms</a></li> -->
 							<li class="menu__item"><a href="#contact" class="menu__link scroll">Contact Us</a></li>
 						</ul>
 					</nav>
@@ -97,9 +97,9 @@ include('db.php');
 
 							<div class="container">
 								<div class="agileits-banner-info">
-								<h4>SUN RISE</h4>
+								<h4>LASERENE THE COTTAGE</h4>
 									<h3>We know what you love</h3>
-										<p>Welcome to our hotels</p>
+										<p>Welcome to our Cottage</p>
 									<div class="agileits_w3layouts_more menu__item">
 				<a href="#" class="menu__link" data-toggle="modal" data-target="#myModal">Learn More</a>
 			</div>
@@ -111,7 +111,7 @@ include('db.php');
 						<div class="w3layouts-banner-top w3layouts-banner-top1">
 							<div class="container">
 								<div class="agileits-banner-info">
-								<h4>SUN RISE</h4>
+								<h4>LASERENE THE COTTAGE</h4>
 									<h3>Stay with friends & families</h3>
 										<p>Come & enjoy precious moment with us</p>
 									<div class="agileits_w3layouts_more menu__item">
@@ -125,7 +125,7 @@ include('db.php');
 						<div class="w3layouts-banner-top w3layouts-banner-top2">
 							<div class="container">
 								<div class="agileits-banner-info">
-								<h4>SUN RISE</h4>
+								<h4>LASERENE THE COTTAGE</h4>
 								<h3>want luxurious vacation?</h3>
 										<p>Get accommodation today</p>
 									<div class="agileits_w3layouts_more menu__item">
@@ -156,22 +156,22 @@ include('db.php');
 								<div class="modal-content">
 									<div class="modal-header">
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
-										<h4>SUN  <span>RISE</span></h4>
+										<h4>LASERENE  <span>THE COTTAGE</span></h4>
 										<img src="images/1.jpg" alt=" " class="img-responsive">
 										<h5>We know what you love</h5>
-										<p>Providing guests unique and enchanting views from their rooms with its exceptional amenities, makes Star Hotel one of bests in its kind.Try our food menu, awesome services and friendly staff while you are here.</p>
+										<p>Providing guests unique and enchanting views from their rooms with its exceptional amenities, makes LASERENE THE COTTAGE one of bests in its kind.Try our food menu, awesome services and friendly staff while you are here.</p>
 									</div>
 								</div>
 							</div>
 						</div>
 <!-- //Modal1 -->
-<div id="availability-agileits">
+<!-- <div id="availability-agileits">
 <div class="col-md-12 book-form-left-w3layouts">
 	<a href="admin/reservation.php"><h2>ROOM RESERVATION</h2></a>
 </div>
 
 			<div class="clearfix"> </div>
-</div>
+</div> -->
 <!-- banner-bottom -->
 	<div class="banner-bottom">
 		<div class="container">	
@@ -184,28 +184,28 @@ include('db.php');
 						<div class="w3_grid_effect">
 							<span class="cbp-ig-icon w3_road"></span>
 							<h4 class="cbp-ig-title">MASTER BEDROOMS</h4>
-							<span class="cbp-ig-category">SUN RISE</span>
+							<span class="cbp-ig-category">LASERENE THE COTTAGE</span>
 						</div>
 					</li>
 					<li>
 						<div class="w3_grid_effect">
 							<span class="cbp-ig-icon w3_cube"></span>
-							<h4 class="cbp-ig-title">SEA VIEW BALCONY</h4>
-							<span class="cbp-ig-category">SUN RISE</span>
+							<h4 class="cbp-ig-title">HILLS VIEW BALCONY</h4>
+							<span class="cbp-ig-category">LASERENE THE COTTAGE</span>
 						</div>
 					</li>
 					<li>
 						<div class="w3_grid_effect">
 							<span class="cbp-ig-icon w3_users"></span>
-							<h4 class="cbp-ig-title">LARGE CAFE</h4>
-							<span class="cbp-ig-category">SUN RISE</span>
+							<h4 class="cbp-ig-title">CAFE</h4>
+							<span class="cbp-ig-category">LASERENE THE COTTAGE</span>
 						</div>
 					</li>
 					<li>
 						<div class="w3_grid_effect">
 							<span class="cbp-ig-icon w3_ticket"></span>
 							<h4 class="cbp-ig-title">WIFI COVERAGE</h4>
-							<span class="cbp-ig-category">SUN RISE</span>
+							<span class="cbp-ig-category">LASERENE THE COTTAGE</span>
 						</div>
 					</li>
 				</ul>
@@ -217,15 +217,16 @@ include('db.php');
  	<div class="about-wthree" id="about">
 		  <div class="container">
 				   <div class="ab-w3l-spa">
-                            <h3 class="title-w3-agileits title-black-wthree">About Our SUN RISE</h3> 
-						   <p class="about-para-w3ls">Lorem Ipsum is simply dummy text of the printing and typesetting industry.Sed tempus vestibulum lacus blandit faucibus. Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula, at imperdiet urna</p>
+                            <h3 class="title-w3-agileits title-black-wthree">About Our LASERENE THE COTTAGE</h3> 
+						   <p class="about-para-w3ls">A beautiful emerald cottage surrounded by green hills and a web of walking tracks—there are plenty of picturesque places to visit and things to do in LASERENE THE COTTAGE. Nainital, located in the Kumaon region of Uttarakhand, often termed as “queen of lakes.” This is one of the most sought-after hill stations of North India adorned with a combination of picturesque Himalayan hills and lakes.
+						   </p>
 						   <img src="images/about.jpg" class="img-responsive" alt="Hair Salon">
 										<div class="w3l-slider-img">
 											<img src="images/a1.jpg" class="img-responsive" alt="Hair Salon">
 										</div>
                                        <div class="w3ls-info-about">
 										    <h4>You'll love all the amenities we offer!</h4>
-											<p>Lorem ipsum dolor sit amet, ut magna aliqua. </p>
+											<p>Experience the greatest for your holidays. </p>
 										</div>
 		          </div>
 		   	<div class="clearfix"> </div>
@@ -242,7 +243,7 @@ include('db.php');
 			 	<div class="advantage-block ">
 					<i class="fa fa-credit-card" aria-hidden="true"></i>
 			 		<h4>Stay First, Pay After! </h4>
-			 		<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+			 		<p>The Internet is becoming the town square for the global village of tomorrow in regards 24x7 Wi-fi is available in the cottage .</p>
 					<p><i class="fa fa-check" aria-hidden="true"></i>Decorated room, proper air conditioned</p>
 					<p><i class="fa fa-check" aria-hidden="true"></i>Private balcony</p>
 			 		
@@ -252,7 +253,7 @@ include('db.php');
 			 	<div class="advantage-block">
 					<i class="fa fa-clock-o" aria-hidden="true"></i>
 			 		<h4>24 Hour Restaurant</h4>
-			 		<p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.</p>
+			 		<p>LASERENE THE COTTAGE features a marvellous in-house restaurant this multi-cuisine eatery offers a wide range of lip-smacking vegetarian and non-vegetarian dishes.</p>
 					<p><i class="fa fa-check" aria-hidden="true"></i>24 hours room service</p>
 					<p><i class="fa fa-check" aria-hidden="true"></i>24-hour Concierge service</p>
 			 	</div>
@@ -264,7 +265,7 @@ include('db.php');
 </div>
 <!--//sevices-->
 <!-- team -->
-<div class="team" id="team">
+<!-- <div class="team" id="team">
 	<div class="container">
 			<h3 class="title-w3-agileits title-black-wthree">Meet Our Team</h3>
 			<div id="horizontalTab">
@@ -358,7 +359,7 @@ include('db.php');
 					</div>
 			</div>
 	</div>
-</div>
+</div> -->
 <!-- //team -->
 <!-- Gallery -->
 <section class="portfolio-w3ls" id="gallery">
@@ -366,7 +367,7 @@ include('db.php');
 				<div class="col-md-3 gallery-grid gallery1">
 					<a href="images/g1.jpg" class="swipebox"><img src="images/g1.jpg" class="img-responsive" alt="/">
 						<div class="textbox">
-						<h4>SUN RISE</h4>
+						<h4>LASERENE THE COTTAGE</h4>
 							<p><i class="fa fa-picture-o" aria-hidden="true"></i></p>
 						</div>
 				</a>
@@ -374,7 +375,7 @@ include('db.php');
 				<div class="col-md-3 gallery-grid gallery1">
 					<a href="images/g2.jpg" class="swipebox"><img src="images/g2.jpg" class="img-responsive" alt="/">
 						<div class="textbox">
-						<h4>SUN RISE</h4>
+						<h4>LASERENE THE COTTAGE</h4>
 							<p><i class="fa fa-picture-o" aria-hidden="true"></i></p>
 						</div>
 				</a>
@@ -382,7 +383,7 @@ include('db.php');
 				<div class="col-md-3 gallery-grid gallery1">
 					<a href="images/g3.jpg" class="swipebox"><img src="images/g3.jpg" class="img-responsive" alt="/">
 						<div class="textbox">
-						<h4>SUN RISE</h4>
+						<h4>LASERENE THE COTTAGE</h4>
 							<p><i class="fa fa-picture-o" aria-hidden="true"></i></p>
 						</div>
 				</a>
@@ -390,7 +391,7 @@ include('db.php');
 				<div class="col-md-3 gallery-grid gallery1">
 					<a href="images/g4.jpg" class="swipebox"><img src="images/g4.jpg" class="img-responsive" alt="/">
 						<div class="textbox">
-						<h4>SUN RISE</h4>
+						<h4>LASERENE THE COTTAGE</h4>
 							<p><i class="fa fa-picture-o" aria-hidden="true"></i></p>
 						</div>
 				</a>
@@ -398,7 +399,7 @@ include('db.php');
 				<div class="col-md-3 gallery-grid gallery1">
 					<a href="images/g5.jpg" class="swipebox"><img src="images/g5.jpg" class="img-responsive" alt="/">
 						<div class="textbox">
-						<h4>SUN RISE</h4>
+						<h4>LASERENE THE COTTAGE</h4>
 							<p><i class="fa fa-picture-o" aria-hidden="true"></i></p>
 						</div>
 					</a>
@@ -406,7 +407,7 @@ include('db.php');
 				<div class="col-md-3 gallery-grid gallery1">
 					<a href="images/g6.jpg" class="swipebox"><img src="images/g6.jpg" class="img-responsive" alt="/">
 						<div class="textbox">
-						<h4>SUN RISE</h4>
+						<h4>LASERENE THE COTTAGE</h4>
 							<p><i class="fa fa-picture-o" aria-hidden="true"></i></p>
 					   </div>
 				   </a>
@@ -414,7 +415,7 @@ include('db.php');
 				<div class="col-md-3 gallery-grid gallery1">
 					<a href="images/g6.jpg" class="swipebox"><img src="images/g7.jpg" class="img-responsive" alt="/">
 						<div class="textbox">
-						<h4>SUN RISE</h4>
+						<h4>LASERENE THE COTTAGE</h4>
 							<p><i class="fa fa-picture-o" aria-hidden="true"></i></p>
 					   </div>
 				   </a>
@@ -422,7 +423,7 @@ include('db.php');
 				<div class="col-md-3 gallery-grid gallery1">
 					<a href="images/g6.jpg" class="swipebox"><img src="images/g8.jpg" class="img-responsive" alt="/">
 						<div class="textbox">
-						<h4>SUN RISE</h4>
+						<h4>LASERENE THE COTTAGE</h4>
 							<p><i class="fa fa-picture-o" aria-hidden="true"></i></p>
 					   </div>
 				   </a>
@@ -430,7 +431,7 @@ include('db.php');
 					<div class="col-md-3 gallery-grid gallery1">
 					<a href="images/g9.jpg" class="swipebox"><img src="images/g9.jpg" class="img-responsive" alt="/">
 						<div class="textbox">
-						<h4>SUN RISE</h4>
+						<h4>LASERENE THE COTTAGE</h4>
 							<p><i class="fa fa-picture-o" aria-hidden="true"></i></p>
 						</div>
 				</a>
@@ -438,7 +439,7 @@ include('db.php');
 				<div class="col-md-3 gallery-grid gallery1">
 					<a href="images/g10.jpg" class="swipebox"><img src="images/g10.jpg" class="img-responsive" alt="/">
 						<div class="textbox">
-						<h4>SUN RISE</h4>
+						<h4>LASERENE THE COTTAGE</h4>
 							<p><i class="fa fa-picture-o" aria-hidden="true"></i></p>
 						</div>
 				</a>
@@ -446,7 +447,7 @@ include('db.php');
 				<div class="col-md-3 gallery-grid gallery1">
 					<a href="images/g4.jpg" class="swipebox"><img src="images/g4.jpg" class="img-responsive" alt="/">
 						<div class="textbox">
-						<h4>SUN RISE</h4>
+						<h4>LASERENE THE COTTAGE</h4>
 							<p><i class="fa fa-picture-o" aria-hidden="true"></i></p>
 						</div>
 				</a>
@@ -454,7 +455,7 @@ include('db.php');
 				<div class="col-md-3 gallery-grid gallery1">
 					<a href="images/g2.jpg" class="swipebox"><img src="images/g2.jpg" class="img-responsive" alt="/">
 						<div class="textbox">
-						<h4>SUN RISE</h4>
+						<h4>LASERENE THE COTTAGE</h4>
 							<p><i class="fa fa-picture-o" aria-hidden="true"></i></p>
 						</div>
 				</a>
@@ -463,7 +464,7 @@ include('db.php');
 </section>
 <!-- //gallery -->
 	 <!-- rooms & rates -->
-      <div class="plans-section" id="rooms">
+      <!-- <div class="plans-section" id="rooms">
 				 <div class="container">
 				 <h3 class="title-w3-agileits title-black-wthree">Rooms And Rates</h3>
 						<div class="priceing-table-main">
@@ -563,10 +564,10 @@ include('db.php');
 				<div class="clearfix"> </div>
 			</div>
 		</div>
-	</div>
+	</div> -->
 	 <!--// rooms & rates -->
   <!-- visitors -->
-	<div class="w3l-visitors-agile" >
+	<!-- <div class="w3l-visitors-agile" >
 		<div class="container">
                  <h3 class="title-w3-agileits title-black-wthree">What other visitors experienced</h3> 
 		</div>
@@ -674,7 +675,7 @@ include('db.php');
 				</div>
 			</section>
 		</div>	
-	</div>
+	</div> -->
   <!-- visitors -->
 <!-- contact -->
 <section class="contact-w3ls" id="contact">
@@ -728,9 +729,9 @@ include('db.php');
 		</div>
 		<div class="col-lg-6 col-md-6 col-sm-6 contact-w3-agile1" data-aos="flip-right">
 			<h4>Connect With Us</h4>
-			<p class="contact-agile1"><strong>Phone :</strong>+94 (65)222-44-55</p>
-			<p class="contact-agile1"><strong>Email :</strong> <a href="mailto:name@example.com">INFO@SUNRISE.COM</a></p>
-			<p class="contact-agile1"><strong>Address :</strong> New Kalmunai Road, Batticaloa, Sri Lanka</p>
+			<p class="contact-agile1"><strong>Phone :</strong>+91 - 8630690077 / +91 - 9318321161</p>
+			<p class="contact-agile1"><strong>Email :</strong> <a href="mailto:name@example.com">info@laserenethecottage.com</a></p>
+			<p class="contact-agile1"><strong>Address :</strong> Vill. Baggar Talla, Po. Pangot, Dist. Nainital, Uttarakhand, India - 263001</p>
 																
 			<div class="social-bnr-agileits footer-icons-agileinfo">
 				<ul class="social-icons3">
