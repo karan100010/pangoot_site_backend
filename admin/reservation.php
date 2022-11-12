@@ -6,7 +6,7 @@ include('db.php')
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RESERVATION SUNRISE HOTEL</title>
+    <title>RESERVATION Laserene Cottage</title>
 	<!-- Bootstrap Styles-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FontAwesome Styles-->
@@ -23,7 +23,7 @@ include('db.php')
                 <ul class="nav" id="main-menu">
 
                     <li>
-                        <a  href="../index.php"><i class="fa fa-home"></i> Homepage</a>
+                        <a  href="../index.php"><i class="fa fa-home"></i>Homepage</a>
                     </li>
                     
 					</ul>
@@ -209,18 +209,16 @@ include('db.php')
 							{
 							
 									$con=mysqli_connect("localhost","root","","hotel");
-                                    
-                                
 									$check="SELECT * FROM roombook WHERE email = '$_POST[email]' AND cin = '$_POST[cin]'";
 									$rs = mysqli_query($con,$check);
 									$data = mysqli_fetch_array($rs, MYSQLI_NUM);
-									if($data[0] > 10) {
+									if(!is_null($data[0]))
+                                    {
+                                    if($data[0] > 10) {
                                     //kj changed this from 1 to 10
-                                        
-                                       
-                        
 										echo "<script type='text/javascript'> alert('User Already in Exists $data')</script>";										
 									}
+                                }
 									else
 									{
 										$new ="Not Conform";
