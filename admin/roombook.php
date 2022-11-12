@@ -26,8 +26,6 @@ if(!isset($_SESSION["user"]))
 					$fname = $row['FName'];
 					$lname = $row['LName'];
 					$email = $row['Email'];
-					$nat = $row['National'];
-					$country = $row['Country'];
 					$Phone = $row['Phone'];
 					$troom = $row['TRoom'];
 					$nroom = $row['NRoom'];
@@ -564,7 +562,7 @@ if(!isset($_SESSION["user"]))
 														
 														if(mysqli_query($con,$psql))
 														{	$notfree="NotFree";
-															$rpsql = "UPDATE `room` SET `place`='$notfree',`cusid`='$id' where bedding ='$bed' and type='$troom' ";
+															$rpsql = "UPDATE `room` SET `place`='$notfree',`id`='$id' where bedding ='$bed' and type='$troom' ";
 															if(mysqli_query($con,$rpsql))
 															{
 															echo "<script type='text/javascript'> alert('Booking Conform')</script>";
