@@ -10,7 +10,8 @@ include('db.php');
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Resort Inn Responsive , Smartphone Compatible web template , Samsung, LG, Sony Ericsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
+		function hideURLbar(){ window.scrollTo(0,1); } 
+</script>
 <!-- //for-mobile-apps -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/font-awesome.css" rel="stylesheet"> 
@@ -31,16 +32,16 @@ include('db.php');
 <div class="banner-top">
 			<div class="social-bnr-agileits">
 				<ul class="social-icons3">
-								<li><a href="https://www.facebook.com/" class="fa fa-facebook icon-border facebook"> </a></li>
+								<!-- <li><a href="https://www.facebook.com/" class="fa fa-facebook icon-border facebook"> </a></li>
 								<li><a href="https://twitter.com/" class="fa fa-twitter icon-border twitter"> </a></li>
-								<li><a href="https://plus.google.com/u/0/" class="fa fa-google-plus icon-border googleplus"> </a></li> 
+								<li><a href="https://plus.google.com/u/0/" class="fa fa-google-plus icon-border googleplus"> </a></li>  -->
 							</ul>
 			</div>
 			<div class="contact-bnr-w3-agile">
 				<ul>
 					<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">info@laserenethecottage.com</a></li>
 					<li><i class="fa fa-phone" aria-hidden="true"></i>+91 - 8630690077 / +91 - 9318321161</li>	
-					<li class="s-bar">
+					<!-- <li class="s-bar">
 						<div class="search">
 							<input class="search_box" type="checkbox" id="search_box">
 							<label class="icon-search" for="search_box"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></label>
@@ -51,7 +52,7 @@ include('db.php');
 								</form>
 							</div>
 						</div>
-					</li>
+					</li> -->
 				</ul>
 			</div>
 			<div class="clearfix"></div>
@@ -157,7 +158,7 @@ include('db.php');
 									<div class="modal-header">
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
 										<h4>LASERENE  <span>THE COTTAGE</span></h4>
-										<img src="images/1.jpg" alt=" " class="img-responsive">
+										<img src="images/g12.jpg" alt=" " class="img-responsive">
 										<h5>We know what you love</h5>
 										<p>Providing guests unique and enchanting views from their rooms with its exceptional amenities, makes LASERENE THE COTTAGE one of bests in its kind.Try our food menu, awesome services and friendly staff while you are here.</p>
 									</div>
@@ -190,7 +191,7 @@ include('db.php');
 					<li>
 						<div class="w3_grid_effect">
 							<span class="cbp-ig-icon w3_cube"></span>
-							<h4 class="cbp-ig-title">HILLS VIEW BALCONY</h4>
+							<h4 class="cbp-ig-title">HILLS VIEW</h4>
 							<span class="cbp-ig-category">LASERENE THE COTTAGE</span>
 						</div>
 					</li>
@@ -246,6 +247,8 @@ include('db.php');
 			 		<p>The Internet is becoming the town square for the global village of tomorrow in regards 24x7 Wi-fi is available in the cottage .</p>
 					<p><i class="fa fa-check" aria-hidden="true"></i>Decorated room, proper air conditioned</p>
 					<p><i class="fa fa-check" aria-hidden="true"></i>Private balcony</p>
+					<p><i class="fa fa-check" aria-hidden="true"></i>Dry cleaning and laundry</p>
+					<p><i class="fa fa-check" aria-hidden="true"></i>Credit cards accepted</p>
 			 		
 			 	</div>
 			 </div>
@@ -256,6 +259,8 @@ include('db.php');
 			 		<p>LASERENE THE COTTAGE features a marvellous in-house restaurant this multi-cuisine eatery offers a wide range of lip-smacking vegetarian and non-vegetarian dishes.</p>
 					<p><i class="fa fa-check" aria-hidden="true"></i>24 hours room service</p>
 					<p><i class="fa fa-check" aria-hidden="true"></i>24-hour Concierge service</p>
+					<p><i class="fa fa-check" aria-hidden="true"></i>Cable TV</p>
+					<p><i class="fa fa-check" aria-hidden="true"></i>Reservation & confirmation</p>
 			 	</div>
 			 </div>
 			<div class="clearfix"> </div>
@@ -679,8 +684,8 @@ include('db.php');
   <!-- visitors -->
 <!-- contact -->
 <section class="contact-w3ls" id="contact">
-	<div class="container">
-		<div class="col-lg-6 col-md-6 col-sm-6 contact-w3-agile2" data-aos="flip-left">
+	<div class="container foot">
+		<!-- <div class="col-lg-6 col-md-6 col-sm-6 contact-w3-agile2" data-aos="flip-left">
 			<div class="contact-agileits">
 				<h4>Contact Us</h4>
 				<p class="contact-agile2">Sign Up For Our News Letters</p>
@@ -726,7 +731,7 @@ include('db.php');
 				}
 				?>
 			</div>
-		</div>
+		</div> -->
 		<div class="col-lg-6 col-md-6 col-sm-6 contact-w3-agile1" data-aos="flip-right">
 			<h4>Connect With Us</h4>
 			<p class="contact-agile1"><strong>Phone :</strong>+91 - 8630690077 / +91 - 9318321161</p>
@@ -735,20 +740,20 @@ include('db.php');
 																
 			<div class="social-bnr-agileits footer-icons-agileinfo">
 				<ul class="social-icons3">
-								<li><a href="#" class="fa fa-facebook icon-border facebook"> </a></li>
-								<li><a href="#" class="fa fa-twitter icon-border twitter"> </a></li>
-								<li><a href="#" class="fa fa-google-plus icon-border googleplus"> </a></li> 
+								<li><a href="#" class="fa fa-facebook "> </a></li>
+								<li><a href="#" class="fa fa-twitter "> </a></li>
+								<li><a href="https://www.instagram.com/laserenethecottage/" class="fa fa-instagram "> </a></li> 
 								
 							</ul>
 			</div>
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3074.7905052320443!2d-77.84987248482734!3d39.586871613613056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c9f6a80ccf0661%3A0x7210426c67abc40!2sVirginia+Welcome+Center%2FSafety+Rest+Area!5e0!3m2!1sen!2sin!4v1485760915662" ></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28618.731390239973!2d79.37402146272026!3d29.414134128141914!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8a832f6ba9aaad1a!2sLaSerene%20The%20Cottage!5e0!3m2!1sen!2sin!4v1665898133659!5m2!1sen!2sin" ></iframe>
 		</div>
 		<div class="clearfix"></div>
 	</div>
 </section>
 <!-- /contact -->
 			<div class="copy">
-		        <p>© 2017 SUNRISE . All Rights Reserved | Design by <a href="index.php">SUNRISE</a> </p>
+		        <p>© 2022 LASERENE THE COTTAGE . All Rights Reserved | Design by <a href="index.php">SUNRISE</a> </p>
 		    </div>
 <!--/footer -->
 <!-- js -->
