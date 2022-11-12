@@ -191,7 +191,7 @@ include('db.php')
                 <div class="col-md-12 col-sm-12">
                     <div class="well">
                         <h4>HUMAN VERIFICATION</h4>
-                        <p>Type Below this code <?php $Random_code=rand(); echo$Random_code; ?> </p><br />
+                        <p>Type Below this code <?php $Random_code=rand(1,999); echo$Random_code; ?> </p><br />
 						<p>Enter the random code<br /></p>
 							<input  type="text" name="code1" title="random code" />
 							<input type="hidden" name="code" value="<?php echo $Random_code; ?>" />
@@ -212,11 +212,12 @@ include('db.php')
 									$check="SELECT * FROM roombook WHERE email = '$_POST[email]' AND cin = '$_POST[cin]'";
 									$rs = mysqli_query($con,$check);
 									$data = mysqli_fetch_array($rs, MYSQLI_NUM);
-									
-                                    if($data[0] > 10) {
-                                    //kj changed this from 1 to 10
-										echo "<script type='text/javascript'> alert('User Already in Exists $data')</script>";										
-									}
+									if(isset($data[0])){
+                                        if($data[0] > 10) {
+                                        //kj changed this from 1 to 10
+                                            echo "<script type='text/javascript'> alert('User Already in Exists')</script>";										
+                                        }
+                                }
                                 
 									else
 									{

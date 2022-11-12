@@ -135,18 +135,19 @@ if(!isset($_SESSION["user"]))
 										$check="SELECT * FROM room WHERE type = '$room' AND bedding = '$bed'";
 										$rs = mysqli_query($con,$check);
 										$data = mysqli_fetch_array($rs, MYSQLI_NUM);
-										if($data[0] > 1) {
-											// echo "<script type='text/javascript'> alert('Room Already in Exists')</script>";
-                                            $sql ="INSERT INTO `room`( `type`, `bedding`,`place`) VALUES ('$room','$bed','$place')" ;
-										if(mysqli_query($con,$sql))
-										{
-										 echo '<script>alert("New Room Added") </script>' ;
-										}else {
-											echo '<script>alert("Sorry ! Check The System") </script>' ;
-										}
-											
-										}
-
+										if(isset($data[0])){
+                                            if($data[0] > 1) {
+                                                // echo "<script type='text/javascript'> alert('Room Already in Exists')</script>";
+                                                $sql ="INSERT INTO `room`( `type`, `bedding`,`place`) VALUES ('$room','$bed','$place')" ;
+                                            if(mysqli_query($con,$sql))
+                                            {
+                                            echo '<script>alert("New Room Added") </script>' ;
+                                            }else {
+                                                echo '<script>alert("Sorry ! Check The System") </script>' ;
+                                            }
+                                                
+                                            }
+                                    }
 										else
 										{
 							 
