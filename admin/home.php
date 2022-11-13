@@ -64,9 +64,9 @@ if(!isset($_SESSION["user"]))
                     <li>
                         <a class="active-menu" href="home.php"><i class="fa fa-dashboard"></i> Status</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="messages.php"><i class="fa fa-desktop"></i> News Letters</a>
-                    </li>
+                    </li> -->
 					<li>
                         <a href="roombook.php"><i class="fa fa-bar-chart-o"></i> Room Booking</a>
                     </li>
@@ -157,7 +157,7 @@ if(!isset($_SESSION["user"]))
                                             <th>#</th>
                                             <th>Name</th>
                                             <th>Email</th>
-                                            <th>Country</th>
+                                            <!-- <th>Country</th> -->
 											<th>Room</th>
 											<th>Bedding</th>
 											<th>Meal</th>
@@ -182,7 +182,7 @@ if(!isset($_SESSION["user"]))
 												<th>".$trow['id']."</th>
 												<th>".$trow['FName']." ".$trow['LName']."</th>
 												<th>".$trow['Email']."</th>
-												<th>".$trow['Country']."</th>
+												// <th>".$trow['Country']."</th>
 												<th>".$trow['TRoom']."</th>
 												<th>".$trow['Bed']."</th>
 												<th>".$trow['Meal']."</th>
@@ -215,7 +215,7 @@ if(!isset($_SESSION["user"]))
 								while($row=mysqli_fetch_array($rre) )
 								{		
 										$br = $row['stat'];
-										if($br=="Conform")
+										if($br=="2")
 										{
 											$r = $r + 1;
 											
@@ -247,7 +247,7 @@ if(!isset($_SESSION["user"]))
 										while($mrow=mysqli_fetch_array($mre) )
 										{		
 											$br = $mrow['stat'];
-											if($br=="Conform")
+											if($br=="2")
 											{
 												$fid = $mrow['id'];
 												 
@@ -293,7 +293,7 @@ if(!isset($_SESSION["user"]))
 								}
 						
 								?>
-                                <div class="panel panel-danger">
+                                <!-- <div class="panel panel-danger">
                                     <div class="panel-heading">
                                         <h4 class="panel-title">
                                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" class="collapsed">
@@ -306,8 +306,8 @@ if(!isset($_SESSION["user"]))
                                     <div id="collapseThree" class="panel-collapse collapse">
                                         <div class="panel-body">
                                             <div class="panel-body">
-                            <div class="table-responsive">
-                                <table class="table">
+                                  <div class="table-responsive">
+                                  <table class="table">
                                     <thead>
                                         <tr>
                                             <th>#</th>
@@ -346,7 +346,7 @@ if(!isset($_SESSION["user"]))
                         </div>
                     </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
