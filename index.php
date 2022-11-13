@@ -67,7 +67,7 @@ include('db.php');
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<h1><a class="navbar-brand" href="index.php">LASERENE <span>THE COTTAGE</span><p class="logo_w3l_agile_caption">Your Dreamy Cottage</p></a></h1>
+					<h1><a class="navbar-brand" href="index.php">LASERENE <span>THE COTTAGE</span><p class="logo_w3l_agile_caption">Your Dream Cottage</p></a></h1>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
@@ -166,13 +166,13 @@ include('db.php');
 							</div>
 						</div>
 <!-- //Modal1 -->
-<!-- <div id="availability-agileits">
+<div id="availability-agileits">
 <div class="col-md-12 book-form-left-w3layouts">
 	<a href="admin/reservation.php"><h2>ROOM RESERVATION</h2></a>
 </div>
 
 			<div class="clearfix"> </div>
-</div> -->
+</div>
 <!-- banner-bottom -->
 	<div class="banner-bottom">
 		<div class="container">	
@@ -218,12 +218,12 @@ include('db.php');
  	<div class="about-wthree" id="about">
 		  <div class="container">
 				   <div class="ab-w3l-spa">
-                            <h3 class="title-w3-agileits title-black-wthree">About Our LASERENE THE COTTAGE</h3> 
+                            <h3 class="title-w3-agileits title-black-wthree">About Our LASERENE COTTAGE</h3> 
 						   <p class="about-para-w3ls">A beautiful emerald cottage surrounded by green hills and a web of walking tracks—there are plenty of picturesque places to visit and things to do in LASERENE THE COTTAGE. Nainital, located in the Kumaon region of Uttarakhand, often termed as “queen of lakes.” This is one of the most sought-after hill stations of North India adorned with a combination of picturesque Himalayan hills and lakes.
 						   </p>
-						   <img src="images/about.jpg" class="img-responsive" alt="Hair Salon">
+						   <img src="images/My Project.jpg" class="img-responsive" alt="Hair Salon">
 										<div class="w3l-slider-img">
-											<img src="images/a1.jpg" class="img-responsive" alt="Hair Salon">
+											<img src="images/g10.jpg" class="img-responsive" alt="Hair Salon">
 										</div>
                                        <div class="w3ls-info-about">
 										    <h4>You'll love all the amenities we offer!</h4>
@@ -467,6 +467,22 @@ include('db.php');
 				</div>
 				<div class="clearfix"> </div>
 </section>
+<!-- Book now section -->
+<!-- <div class="chooseus spad set-bg" data-setbg="images/hero.jpg">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="chooseus__text">
+                        <div class="section-title">
+                             <h5>WHY CHOOSE US</h5>
+                            <h2>Contact us now to get your booking</h2>
+                        </div>
+                        <a href="#foot" class="primary-btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div> -->
 <!-- //gallery -->
 	 <!-- rooms & rates -->
       <!-- <div class="plans-section" id="rooms">
@@ -572,21 +588,21 @@ include('db.php');
 	</div> -->
 	 <!--// rooms & rates -->
   <!-- visitors -->
-	<!-- <div class="w3l-visitors-agile" >
+	<div class="w3l-visitors-agile" >
 		<div class="container">
-                 <h3 class="title-w3-agileits title-black-wthree">What other visitors experienced</h3> 
+                 <h3 class="title-w3-agileits title-black-wthree">Visitors Experiences</h3> 
 		</div>
 		<div class="w3layouts_work_grids">
 			<section class="slider">
 				<div class="flexslider">
 					<ul class="slides">
 						<li>
-							<div class="w3layouts_work_grid_left">
+							<!-- <div class="w3layouts_work_grid_left">
 								<img src="images/5.jpg" alt=" " class="img-responsive" />
 								<div class="w3layouts_work_grid_left_pos">
 									<img src="images/c1.jpg" alt=" " class="img-responsive" />
 								</div>
-							</div>
+							</div> -->
 							<div class="w3layouts_work_grid_right">
 								<h4>
 								<i class="fa fa-star" aria-hidden="true"></i>
@@ -596,21 +612,19 @@ include('db.php');
 								<i class="fa fa-star" aria-hidden="true"></i>
 								Worth to come again
 								</h4>
-								<p>Sed tempus vestibulum lacus blandit faucibus. 
-									Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula, 
-									at imperdiet urna. </p>
-								<h5>Julia Rose</h5>
-								<p>Germany</p>
+								<p>This place is amazing located in the outskirts of Nainital. This place is a super worth coming and spending time with friends, families and colleagues. The location, the views , the hospitality , the food , the service , the rates everything is beyond comparison. What a place. The view from each cottage is like a heaven. This facility is a new set up and owner has made it with worth living for the travellers. </p>
+								<h5>Shaurya Malhotra</h5>
+								<p>Delhi</p>
 							</div>
 							<div class="clearfix"> </div>
 						</li>
 						<li>
-							<div class="w3layouts_work_grid_left">
+							<!-- <div class="w3layouts_work_grid_left">
 								<img src="images/5.jpg" alt=" " class="img-responsive" />
 								<div class="w3layouts_work_grid_left_pos">
 									<img src="images/c2.jpg" alt=" " class="img-responsive" />
 								</div>
-							</div>
+							</div> -->
 							<div class="w3layouts_work_grid_right">
 								<h4>
 								<i class="fa fa-star" aria-hidden="true"></i>
@@ -618,23 +632,21 @@ include('db.php');
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star-o" aria-hidden="true"></i>
-								Worth to come again
+								Must visit
 								</h4>
-								<p>Sed tempus vestibulum lacus blandit faucibus. 
-									Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula, 
-									at imperdiet urna. </p>
-								<h5>Jahnatan Smith</h5>
-								<p>United States</p>
+								<p>Staff- good and co-operative, clean rooms , nice location, surrounded by mountains, scenic views, home like food.</p>
+								<h5>Anushka Goel</h5>
+								<p>Surat</p>
 							</div>
 							<div class="clearfix"> </div>
 						</li>
 						<li>
-							<div class="w3layouts_work_grid_left">
+							<!-- <div class="w3layouts_work_grid_left">
 								<img src="images/5.jpg" alt=" " class="img-responsive" />
 								<div class="w3layouts_work_grid_left_pos">
 									<img src="images/c3.jpg" alt=" " class="img-responsive" />
 								</div>
-							</div>
+							</div> -->
 							<div class="w3layouts_work_grid_right">
 								<h4>
 								<i class="fa fa-star" aria-hidden="true"></i>
@@ -642,23 +654,21 @@ include('db.php');
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star-o" aria-hidden="true"></i>
-								Worth to come again
+								Nice Place
 								</h4>
-								<p>Sed tempus vestibulum lacus blandit faucibus. 
-									Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula, 
-									at imperdiet urna. </p>
-								<h5>Rosalind Cloer</h5>
-								<p>Italy</p>
+								<p>Undoubtedly an awesome place. Service is amazing and they are very humble. The valley view from the cottages is mesmerizing. Simply and great and amazing experience. I'm indeed touched with your hospitality. All in all it was my most memorable vacation with my family and I will be cherishing them all my life for sure. </p>
+								<h5>Naman Awasthi</h5>
+								<p>Bangalore</p>
 							</div>
 							<div class="clearfix"> </div>
 						</li>
 						<li>
-							<div class="w3layouts_work_grid_left">
+							<!-- <div class="w3layouts_work_grid_left">
 								<img src="images/5.jpg" alt=" " class="img-responsive" />
 								<div class="w3layouts_work_grid_left_pos">
 									<img src="images/c4.jpg" alt=" " class="img-responsive" />
 								</div>
-							</div>
+							</div> -->
 							<div class="w3layouts_work_grid_right">
 								<h4>
 								<i class="fa fa-star" aria-hidden="true"></i>
@@ -666,13 +676,11 @@ include('db.php');
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star-o" aria-hidden="true"></i>
 								<i class="fa fa-star-o" aria-hidden="true"></i>
-								Worth to come again
+								Mesmerizing view
 								</h4>
-								<p>Sed tempus vestibulum lacus blandit faucibus. 
-									Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula, 
-									at imperdiet urna. </p>
-								<h5>Amie Bublitz</h5>
-								<p>Switzerland</p>
+								<p>The hospitality and warmth extended by the host make it a really homely experience. It is a place filled with positive energy and just living in oneness with nature. This is one time one would love to just be cut off from the world. Its a different holiday experience especially for me. Beautiful place to revive yourself. Thank you for sharing your space with us. 🌻 Love to visit it again! </p>
+								<h5>Geetika Joshi</h5>
+								<p>Chamoli</p>
 							</div>
 							<div class="clearfix"> </div>
 						</li>
@@ -680,7 +688,7 @@ include('db.php');
 				</div>
 			</section>
 		</div>	
-	</div> -->
+	</div>
   <!-- visitors -->
 <!-- contact -->
 <section class="contact-w3ls" id="contact">

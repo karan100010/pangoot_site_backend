@@ -216,7 +216,7 @@ label.icon-search span {
 /*--//search--*/
 /*-- nav --*/
 .w3_navigation {
-    background: #0f2453 ;
+    background: #1a1a1a;
 }
 .navbar-default {
     background: none;
@@ -451,7 +451,7 @@ li.menu__item:nth-child(6) {
     padding: 8px 25px;
     position: relative;
     display: inline-block;
-    background: #0f2453;
+    /* background: #0f2453; */
 	    margin-top: 3em;
     z-index: 9999;
     border: 2px solid #fff;
@@ -930,7 +930,7 @@ li.menu__item:nth-child(6) {
 	font-family:FontAwesome;
 	font-size: 5em;
 	speak: none;
-	color: #0f2453;
+	color: #1a1a1a;
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
@@ -1011,7 +1011,7 @@ li.menu__item:nth-child(6) {
 /* Hover styles */
 
 .cbp-ig-grid li > .w3_grid_effect:hover {
-    background: #0f2453;
+    background: #1a1a1a;
 }
 
 .cbp-ig-grid li > .w3_grid_effect:hover .cbp-ig-icon {
@@ -1322,6 +1322,7 @@ ul.resp-tabs-list {
 /*--//rooms & rates --*/
   /*-- visitors --*/
   .w3l-visitors-agile {
+	padding-bottom: 40px;
     background: rgba(15, 36, 83, 0.07);
 }
 .title-agileits1 {
@@ -1598,7 +1599,7 @@ color: #fff !important;
 /*--copy-right--*/
 .copy {
     text-align: center;
-    background: #0f2453;
+    background: #1a1a1a;
 }
 .copy p {
     color: #fff;
@@ -3264,4 +3265,58 @@ color: #fff !important;
 .foot{
 	display: flex;
 	justify-content: center;
+}
+.chooseus {
+	padding-top: 80px;
+}
+
+.chooseus__text .section-title {
+	margin-bottom: 50px;
+}
+
+.chooseus__text .section-title h2 {
+	color: #ffffff;
+}
+
+.chooseus__text a {
+	background: #ffffff;
+	color: #19191A;
+}
+
+.spad {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.set-bg {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+.section-title {
+	margin-bottom: 55px;
+	text-align: center;
+}
+
+.section-title h5 {
+	color: #E9AD28;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-bottom: 20px;
+}
+
+.section-title h2 {
+	font-size: 44px;
+	color: #19191A;
+}
+.primary-btn {
+	display: inline-block;
+	font-size: 16px;
+	padding: 14px 20px 12px;
+	color: #ffffff;
+	background: #E9AD28;
+	letter-spacing: 2px;
+}
+.w3layouts_work_grid_right{
+	padding-top: 20px;
+	margin-top: 10px;
 }
