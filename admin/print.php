@@ -255,11 +255,12 @@ tr:hover .cut { opacity: 1; }
 		<header>
 			<h1>Invoice</h1>
 			<address >
-				<p>SUN RISE HOTEL,</p>
-				<p>New Kalmunani Road,<br>Battialoa,<br>Sri Lanka.</p>
-				<p>(+94) 65 222 44 55</p>
+				<p>Laserene Cottage</p>
+				<p>Vill. Baggar Talla,<br> Po. Pangot, Dist. Nainital,<br> Uttarakhand,<br> India - 263001</p>
+				<p>+91 - 8630690077 / +91 - 9318321161
+</p>
 			</address>
-			<span><img alt="" src="assets/img/sun.png"></span>
+			<!-- <span><img alt="" src="assets/img/sun.png"></span> -->
 		</header>
 		<article>
 			<h1>Recipient</h1>
@@ -291,23 +292,23 @@ tr:hover .cut { opacity: 1; }
 					<tr>
 						<td><span ><?php echo $troom; ?></span></td>
 						<td><span ><?php echo $days; ?> </span></td>
-						<td><span data-prefix>$</span><span ><?php  echo $type_of_room;?></span></td>
+						<td><span data-prefix>Rs.</span><span ><?php  echo $type_of_room;?></span></td>
 						<td><span ><?php echo $nroom;?> </span></td>
-						<td><span data-prefix>$</span><span><?php echo $ttot; ?></span></td>
+						<td><span data-prefix>Rs.</span><span><?php echo $ttot; ?></span></td>
 					</tr>
 					<tr>
 						<td><span ><?php echo $bed; ?>  Bed </span></td>
 						<td><span ><?php echo $days; ?></span></td>
-						<td><span data-prefix>$</span><span ><?php  echo $type_of_bed;?></span></td>
+						<td><span data-prefix>Rs.</span><span ><?php  echo $type_of_bed;?></span></td>
 						<td><span ><?php echo $nroom;?> </span></td>
-						<td><span data-prefix>$</span><span><?php echo $btot; ?></span></td>
+						<td><span data-prefix>Rs.</span><span><?php echo $btot; ?></span></td>
 					</tr>
 					<tr>
 						<td><span ><?php echo $meal; ?>  </span></td>
 						<td><span ><?php echo $days; ?></span></td>
-						<td><span data-prefix>$</span><span ><?php  echo $type_of_meal?></span></td>
+						<td><span data-prefix>Rs.</span><span ><?php  echo $type_of_meal?></span></td>
 						<td><span ><?php echo $nroom;?> </span></td>
-						<td><span data-prefix>$</span><span><?php echo $mepr; ?></span></td>
+						<td><span data-prefix>Rs.</span><span><?php echo $mepr; ?></span></td>
 					</tr>
 				</tbody>
 			</table>
@@ -315,22 +316,22 @@ tr:hover .cut { opacity: 1; }
 			<table class="balance">
 				<tr>
 					<th><span >Total</span></th>
-					<td><span data-prefix>$</span><span><?php echo $fintot; ?></span></td>
+					<td><span data-prefix>Rs.</span><span><?php echo $fintot; ?></span></td>
 				</tr>
 				<tr>
 					<th><span >Amount Paid</span></th>
-					<td><span data-prefix>$</span><span >0.00</span></td>
+					<td><span data-prefix>Rs.</span><span >0.00</span></td>
 				</tr>
 				<tr>
 					<th><span >Balance Due</span></th>
-					<td><span data-prefix>$</span><span><?php echo $fintot; ?></span></td>
+					<td><span data-prefix>Rs.</span><span><?php echo $fintot; ?></span></td>
 				</tr>
 			</table>
 		</article>
 		<aside>
 			<h1><span >Contact us</span></h1>
 			<div >
-				<p align="center">Email :- info@sunrise.com || Web :- www.sunrise.com || Phone :- +94 65 222 44 55 </p>
+				<p align="center">Email :- info@laserenethecottage.com || Web :- www.laserenethecottage.com || <br>Phone :- +91 - 8630690077 / +91 - 9318321161 </p>
 			</div>
 		</aside>
 	</body>

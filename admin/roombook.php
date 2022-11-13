@@ -26,8 +26,6 @@ if(!isset($_SESSION["user"]))
 					$fname = $row['FName'];
 					$lname = $row['LName'];
 					$email = $row['Email'];
-					$nat = $row['National'];
-					$country = $row['Country'];
 					$Phone = $row['Phone'];
 					$troom = $row['TRoom'];
 					$nroom = $row['NRoom'];
@@ -111,9 +109,9 @@ if(!isset($_SESSION["user"]))
                     <li>
                         <a  href="home.php"><i class="fa fa-dashboard"></i> Status</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a href="messages.php"><i class="fa fa-desktop"></i> News Letters</a>
-                    </li>
+                    </li> -->
 					<li>
                         <a class="active-menu" href="roombook.php"><i class="fa fa-bar-chart-o"></i> Room Booking</a>
                     </li>
@@ -177,7 +175,7 @@ if(!isset($_SESSION["user"]))
                                             <th><?php echo $email; ?> </th>
                                             
                                         </tr>
-										<tr>
+										<!-- <tr>
                                             <th>Nationality </th>
                                             <th><?php echo $nat; ?></th>
                                             
@@ -185,7 +183,7 @@ if(!isset($_SESSION["user"]))
 										<tr>
                                             <th>Country </th>
                                             <th><?php echo $country;  ?></th>
-                                            
+                                             -->
                                         </tr>
 										<tr>
                                             <th>Phone No </th>
@@ -248,13 +246,13 @@ if(!isset($_SESSION["user"]))
 										<div class="form-group">
 														<label>Select the Conformation</label>
 														<select name="conf"class="form-control">
-															<option value selected>	</option>
-															<option value="Conform">Conform</option>
+															<option value selected value="1">Decline</option>
+															<option value="2">Conform</option>
 															
 															
 														</select>
 										 </div>
-							<input type="submit" name="co" value="Conform" class="btn btn-success">
+							<input type="submit" name="co"  class="btn btn-success">
 							
 							</form>
                         </div>
@@ -412,7 +410,7 @@ if(!isset($_SESSION["user"]))
 							</tr>
 						</table>
 						
-						
+						s
 						
                         
 						
@@ -456,38 +454,42 @@ if(!isset($_SESSION["user"]))
 </html>
 
 <?php
+//echo each item in $_POST
+
+
+
 						if(isset($_POST['co']))
 						{	
 							$st = $_POST['conf'];
 							
 							 
 							
-							if($st=="Conform")
+							if($st=="2")
 							{
 									$urb = "UPDATE `roombook` SET `stat`='$st' WHERE id = '$id'";
 									
-								if($f1=="NO" )
+								if($troom=="Superior Room" AND $f1=="NO" )
 								{
 									echo "<script type='text/javascript'> alert('Sorry! Not Available Superior Room ')</script>";
 								}
-								else if($f2 =="NO")
+								else if($troom=="Guest House" AND $f2 =="NO")
 									{
 										echo "<script type='text/javascript'> alert('Sorry! Not Available Guest House')</script>";
 										
 									}
-									else if ($f3 == "NO")
+									else if ($troom=="Single Room" AND $f3 == "NO")
 									{
 										echo "<script type='text/javascript'> alert('Sorry! Not Available Single Room')</script>";
 									}
-										else if($f4=="NO")
+										else if($troom=="Deluxe Room" AND $f4=="NO")
 										{
 										echo "<script type='text/javascript'> alert('Sorry! Not Available Deluxe Room')</script>";
 										}
 										
 										else if( mysqli_query($con,$urb))
 											{	
-												//echo "<script type='text/javascript'> alert('Guest Room booking is conform')</script>";
-												//echo "<script type='text/javascript'> window.location='home.php'</script>";
+												echo "<script type='text/javascript'> alert('Guest Room booking is conform')</script>";
+												echo "<script type='text/javascript'> window.location='home.php'</script>";
 												 $type_of_room = 0;       
 														if($troom=="Superior Room")
 														{
@@ -560,7 +562,10 @@ if(!isset($_SESSION["user"]))
 														
 														if(mysqli_query($con,$psql))
 														{	$notfree="NotFree";
-															$rpsql = "UPDATE `room` SET `place`='$notfree',`cusid`='$id' where bedding ='$bed' and type='$troom' ";
+															//update only the firest instence of $rpsql
+
+											
+															$rpsql = "UPDATE `room` SET `place`='$notfree',`cusid`='$id' where bedding ='$bed' and type='$troom' LIMIT $nroom";
 															if(mysqli_query($con,$rpsql))
 															{
 															echo "<script type='text/javascript'> alert('Booking Conform')</script>";
@@ -574,10 +579,19 @@ if(!isset($_SESSION["user"]))
 									
                                         
 							}	
-					
+					else
+						//detlete booking form roombook table
+						$del = "DELETE FROM `roombook` WHERE `id`='$id'";
+						if(mysqli_query($con,$del))
+						{
+							echo "<script type='text/javascript'> alert('Booking Cancel')</script>";
+							echo "<script type='text/javascript'> window.location='roombook.php'</script>";
+
+						
+						
 						}
 					
 									
-									
+					}		
 							
 						?>

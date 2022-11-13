@@ -10,7 +10,7 @@ if(!isset($_SESSION["user"]))
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SUNRISE HOTEL</title>
+    <title>Laserene Cottage</title>
 	<!-- Bootstrap Styles-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FontAwesome Styles-->
@@ -65,9 +65,9 @@ if(!isset($_SESSION["user"]))
                     <li>
                         <a href="home.php"><i class="fa fa-dashboard"></i> Status</a>
                     </li>
-                    <li>
+                    <!-- <li>
                         <a  href="messages.php"><i class="fa fa-desktop"></i> News Letters</a>
-                    </li>
+                    </li> -->
 					<li>
                         <a href="roombook.php"><i class="fa fa-bar-chart-o"></i>Room Booking</a>
                     </li>

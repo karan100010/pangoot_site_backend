@@ -10,7 +10,7 @@ if(!isset($_SESSION["user"]))
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SUNRISE HOTEL</title>
+    <title>Laserene Cottage</title>
 	<!-- Bootstrap Styles-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
      <!-- FontAwesome Styles-->
@@ -135,11 +135,19 @@ if(!isset($_SESSION["user"]))
 										$check="SELECT * FROM room WHERE type = '$room' AND bedding = '$bed'";
 										$rs = mysqli_query($con,$check);
 										$data = mysqli_fetch_array($rs, MYSQLI_NUM);
-										if($data[0] > 1) {
-											echo "<script type='text/javascript'> alert('Room Already in Exists')</script>";
-											
-										}
-
+										if(isset($data[0])){
+                                            if($data[0] > 1) {
+                                                // echo "<script type='text/javascript'> alert('Room Already in Exists')</script>";
+                                                $sql ="INSERT INTO `room`( `type`, `bedding`,`place`) VALUES ('$room','$bed','$place')" ;
+                                            if(mysqli_query($con,$sql))
+                                            {
+                                            echo '<script>alert("New Room Added") </script>' ;
+                                            }else {
+                                                echo '<script>alert("Sorry ! Check The System") </script>' ;
+                                            }
+                                                
+                                            }
+                                    }
 										else
 										{
 							 
