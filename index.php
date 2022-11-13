@@ -166,10 +166,10 @@ include('db.php');
 							</div>
 						</div>
 <!-- //Modal1 -->
-<div id="availability-agileits">
+<!-- <div id="availability-agileits">
 <div class="col-md-12 book-form-left-w3layouts">
 	<a href="admin/reservation.php"><h2>ROOM RESERVATION</h2></a>
-</div>
+</div> -->
 
 			<div class="clearfix"> </div>
 </div>
@@ -218,7 +218,7 @@ include('db.php');
  	<div class="about-wthree" id="about">
 		  <div class="container">
 				   <div class="ab-w3l-spa">
-                            <h3 class="title-w3-agileits title-black-wthree">About Our LASERENE COTTAGE</h3> 
+                            <h3 class="title-w3-agileits title-black-wthree">About Us</h3> 
 						   <p class="about-para-w3ls">A beautiful emerald cottage surrounded by green hills and a web of walking tracks—there are plenty of picturesque places to visit and things to do in LASERENE THE COTTAGE. Nainital, located in the Kumaon region of Uttarakhand, often termed as “queen of lakes.” This is one of the most sought-after hill stations of North India adorned with a combination of picturesque Himalayan hills and lakes.
 						   </p>
 						   <img src="images/My Project.jpg" class="img-responsive" alt="Hair Salon">
@@ -597,12 +597,12 @@ include('db.php');
 				<div class="flexslider">
 					<ul class="slides">
 						<li>
-							<!-- <div class="w3layouts_work_grid_left">
-								<img src="images/5.jpg" alt=" " class="img-responsive" />
+							<div class="w3layouts_work_grid_left">
+								<img src="images/Restaurant3.jpg" alt=" " class="img-responsive" />
 								<div class="w3layouts_work_grid_left_pos">
-									<img src="images/c1.jpg" alt=" " class="img-responsive" />
+									<img src="images/g1.jpg" alt=" " class="img-responsive" />
 								</div>
-							</div> -->
+							</div>
 							<div class="w3layouts_work_grid_right">
 								<h4>
 								<i class="fa fa-star" aria-hidden="true"></i>
@@ -619,12 +619,12 @@ include('db.php');
 							<div class="clearfix"> </div>
 						</li>
 						<li>
-							<!-- <div class="w3layouts_work_grid_left">
-								<img src="images/5.jpg" alt=" " class="img-responsive" />
+							<div class="w3layouts_work_grid_left">
+								<img src="images/Restaurant3.jpg" alt=" " class="img-responsive" />
 								<div class="w3layouts_work_grid_left_pos">
-									<img src="images/c2.jpg" alt=" " class="img-responsive" />
+									<img src="images/g3.jpg" alt=" " class="img-responsive" />
 								</div>
-							</div> -->
+							</div>
 							<div class="w3layouts_work_grid_right">
 								<h4>
 								<i class="fa fa-star" aria-hidden="true"></i>
@@ -641,12 +641,12 @@ include('db.php');
 							<div class="clearfix"> </div>
 						</li>
 						<li>
-							<!-- <div class="w3layouts_work_grid_left">
-								<img src="images/5.jpg" alt=" " class="img-responsive" />
+							<div class="w3layouts_work_grid_left">
+								<img src="images/Restaurant3.jpg" alt=" " class="img-responsive" />
 								<div class="w3layouts_work_grid_left_pos">
-									<img src="images/c3.jpg" alt=" " class="img-responsive" />
+									<img src="images/g5.jpg" alt=" " class="img-responsive" />
 								</div>
-							</div> -->
+							</div>
 							<div class="w3layouts_work_grid_right">
 								<h4>
 								<i class="fa fa-star" aria-hidden="true"></i>
@@ -663,12 +663,12 @@ include('db.php');
 							<div class="clearfix"> </div>
 						</li>
 						<li>
-							<!-- <div class="w3layouts_work_grid_left">
-								<img src="images/5.jpg" alt=" " class="img-responsive" />
+							<div class="w3layouts_work_grid_left">
+								<img src="images/Restaurant3.jpg" alt=" " class="img-responsive" />
 								<div class="w3layouts_work_grid_left_pos">
-									<img src="images/c4.jpg" alt=" " class="img-responsive" />
+									<img src="images/g7.jpg" alt=" " class="img-responsive" />
 								</div>
-							</div> -->
+							</div>
 							<div class="w3layouts_work_grid_right">
 								<h4>
 								<i class="fa fa-star" aria-hidden="true"></i>
@@ -690,6 +690,12 @@ include('db.php');
 		</div>	
 	</div>
   <!-- visitors -->
+  <div class="container butn-cont">
+	<div class="col-lg-6 butn-cont">
+	<!-- <button target="admin/reservation.php" type="submit" class="btn btn-primary btn-lg temp-btn"><h3>Book Now</h3></button> -->
+	<a href="admin/reservation.php" class="temp-btn"><h3>Book Now</h3></a>
+	</div>
+  </div>
 <!-- contact -->
 <section class="contact-w3ls" id="contact">
 	<div class="container foot">

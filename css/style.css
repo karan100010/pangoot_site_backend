@@ -1465,7 +1465,7 @@ transition: all 0.7s ease;
 text-align:center;
 }
 .textbox h4 {
-    font-size: 2em;
+    font-size: 1em;
     color: #FFF;
     margin-top: 3.5em;
     text-transform: uppercase;
@@ -3319,4 +3319,20 @@ color: #fff !important;
 .w3layouts_work_grid_right{
 	padding-top: 20px;
 	margin-top: 10px;
+}
+.butn-cont{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+	display: flex;
+	justify-content: center;
+	background: #1a1a1a;
+	width: 100%;
+}
+.temp-btn{
+	padding: 20px 40px;
+	background: #E9AD28;
+	border-radius: 16px;
+    color: white;
 }
