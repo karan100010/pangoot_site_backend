@@ -562,10 +562,11 @@ if(!isset($_SESSION["user"]))
 														
 														if(mysqli_query($con,$psql))
 														{	$notfree="NotFree";
-															//update only the firest instence of $rpsql
+															//update only the firest instence if the place is free
+															$rsql = "UPDATE `room` SET `status`='$notfree' WHERE `room_no`='$id' AND `status`='Free' LIMIT 1";
 
 											
-															$rpsql = "UPDATE `room` SET `place`='$notfree',`cusid`='$id' where bedding ='$bed' and type='$troom' LIMIT $nroom";
+	
 															if(mysqli_query($con,$rpsql))
 															{
 															echo "<script type='text/javascript'> alert('Booking Conform')</script>";
