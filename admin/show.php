@@ -194,9 +194,9 @@ tr:hover .cut { opacity: 1; }
 		<header>
 			<h1>Information of Guest</h1>
 			<address >
-				<p>name of hotel,</p>
-				<p>location<br>state,<br>address.</p>
-				<p>+91********</p>
+				<p>Laserene Cottage</p>
+				<p>Vill. Baggar Talla,<br> Po. Pangot, Dist. Nainital,<br> Uttarakhand,<br> India - 263001</p>
+				<p>+91 - 8630690077 / +91 - 9318321161</p>
 			</address>
 			<!-- <span><img alt="" src="assets/img/sun.png"></span> -->
 		</header>
@@ -228,10 +228,10 @@ tr:hover .cut { opacity: 1; }
 						
 						<td>Customer email : -  <?php echo $email; ?> </td>
 					</tr>
-					<tr> 
+					<!-- <tr> 
 						<td>Customer Country : -  <?php echo $country; ?> </td>
 						<td>Customer National : -  <?php echo $National; ?> </td>
-					</tr>
+					</tr> -->
 				</table>
 				<br>
 				<br>
@@ -256,6 +256,7 @@ tr:hover .cut { opacity: 1; }
 						
 					</tr>
 					<tr>
+						
 						<td><span ><?php echo $meal_type; ?>  </span></td>
 						<td><span ><?php echo $nodays; ?></span></td>
 						
@@ -268,7 +269,7 @@ tr:hover .cut { opacity: 1; }
 		<aside>
 			<h1><span >Contact us</span></h1>
 			<div >
-				<p align="center">Email :- xyz@gmail.com || Web :- www.xxxx.com || Phone :- +94 65 xxxxxx 55 </p>
+				<p align="center">Email :- info@laserenethecottage.com || Web :- www.laserenethecottage.com || <br>Phone :- +91 - 8630690077 / +91 - 9318321161 </p>
 			</div>
 		</aside>
 	</body>
