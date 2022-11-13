@@ -215,7 +215,7 @@ if(!isset($_SESSION["user"]))
 								while($row=mysqli_fetch_array($rre) )
 								{		
 										$br = $row['stat'];
-										if($br=="Conform")
+										if($br=="2")
 										{
 											$r = $r + 1;
 											
@@ -247,7 +247,7 @@ if(!isset($_SESSION["user"]))
 										while($mrow=mysqli_fetch_array($mre) )
 										{		
 											$br = $mrow['stat'];
-											if($br=="Conform")
+											if($br=="2")
 											{
 												$fid = $mrow['id'];
 												 
