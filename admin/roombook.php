@@ -563,13 +563,13 @@ if(!isset($_SESSION["user"]))
 														if(mysqli_query($con,$psql))
 														{	$notfree="NotFree";
 															//update only the firest instence if the place is free
-															$rsql = "UPDATE `room` SET `status`='$notfree' WHERE `room_no`='$id' AND `status`='Free' LIMIT 1";
+															$rsql ="UPDATE `room` SET `place`='$notfree',`cusid`='$id' where bedding ='$bed' AND type='$troom' AND place='Free' LIMIT 1";
 
 											
 	
-															if(mysqli_query($con,$rpsql))
+															if(mysqli_query($con,$rsql))
 															{
-															echo "<script type='text/javascript'> alert('Booking Conform')</script>";
+															echo "<script type='text/javascript'> alert('Booking Conform mysqli_query($con,$rpsql)')</script>";
 															echo "<script type='text/javascript'> window.location='roombook.php'</script>";
 															}
 															
@@ -577,7 +577,7 @@ if(!isset($_SESSION["user"]))
 														}
 												
 											}
-									
+										
                                         
 							}	
 					else
