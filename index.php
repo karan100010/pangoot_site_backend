@@ -10,7 +10,8 @@ include('db.php');
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="keywords" content="Resort Inn Responsive , Smartphone Compatible web template , Samsung, LG, Sony Ericsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-		function hideURLbar(){ window.scrollTo(0,1); } </script>
+		function hideURLbar(){ window.scrollTo(0,1); } 
+</script>
 <!-- //for-mobile-apps -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/font-awesome.css" rel="stylesheet"> 
@@ -31,17 +32,17 @@ include('db.php');
 <div class="banner-top">
 			<!-- <div class="social-bnr-agileits">
 				<ul class="social-icons3">
-								<li><a href="https://www.facebook.com/" class="fa fa-facebook icon-border facebook"> </a></li>
+								<!-- <li><a href="https://www.facebook.com/" class="fa fa-facebook icon-border facebook"> </a></li>
 								<li><a href="https://twitter.com/" class="fa fa-twitter icon-border twitter"> </a></li>
-								<li><a href="https://plus.google.com/u/0/" class="fa fa-google-plus icon-border googleplus"> </a></li> 
+								<li><a href="https://plus.google.com/u/0/" class="fa fa-google-plus icon-border googleplus"> </a></li>  -->
 							</ul>
 			</div> -->
 			<div class="contact-bnr-w3-agile">
 				<ul>
 					<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">info@laserenethecottage.com</a></li>
 					<li><i class="fa fa-phone" aria-hidden="true"></i>+91 - 8630690077 / +91 - 9318321161</li>	
-					<!-- <li class="s-bar"> -->
-						<!-- <div class="search">
+					<!-- <li class="s-bar">
+						<div class="search">
 							<input class="search_box" type="checkbox" id="search_box">
 							<label class="icon-search" for="search_box"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></label>
 							<div class="search_form">
@@ -50,8 +51,8 @@ include('db.php');
 									<input type="submit" value="Search">
 								</form>
 							</div>
-						</div> -->
-					<!-- </li> -->
+						</div>
+					</li> -->
 				</ul>
 			</div>
 			<div class="clearfix"></div>
@@ -66,7 +67,7 @@ include('db.php');
 						<span class="icon-bar"></span>
 						<span class="icon-bar"></span>
 					</button>
-					<h1><a class="navbar-brand" href="index.php">LASERENE <span>THE COTTAGE</span><p class="logo_w3l_agile_caption">Your Dreamy Cottage</p></a></h1>
+					<h1><a class="navbar-brand" href="index.php">LASERENE <span>THE COTTAGE</span><p class="logo_w3l_agile_caption">Your Dream Cottage</p></a></h1>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
@@ -157,7 +158,7 @@ include('db.php');
 									<div class="modal-header">
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
 										<h4>LASERENE  <span>THE COTTAGE</span></h4>
-										<img src="images/1.jpg" alt=" " class="img-responsive">
+										<img src="images/g12.jpg" alt=" " class="img-responsive">
 										<h5>We know what you love</h5>
 										<p>Providing guests unique and enchanting views from their rooms with its exceptional amenities, makes LASERENE THE COTTAGE one of bests in its kind.Try our food menu, awesome services and friendly staff while you are here.</p>
 									</div>
@@ -165,13 +166,13 @@ include('db.php');
 							</div>
 						</div>
 <!-- //Modal1 -->
-<!-- <div id="availability-agileits">
+<div id="availability-agileits">
 <div class="col-md-12 book-form-left-w3layouts">
 	<a href="admin/reservation.php"><h2>ROOM RESERVATION</h2></a>
 </div>
 
 			<div class="clearfix"> </div>
-</div> -->
+</div>
 <!-- banner-bottom -->
 	<div class="banner-bottom">
 		<div class="container">	
@@ -190,7 +191,7 @@ include('db.php');
 					<li>
 						<div class="w3_grid_effect">
 							<span class="cbp-ig-icon w3_cube"></span>
-							<h4 class="cbp-ig-title">HILLS VIEW BALCONY</h4>
+							<h4 class="cbp-ig-title">HILLS VIEW</h4>
 							<span class="cbp-ig-category">LASERENE THE COTTAGE</span>
 						</div>
 					</li>
@@ -217,12 +218,12 @@ include('db.php');
  	<div class="about-wthree" id="about">
 		  <div class="container">
 				   <div class="ab-w3l-spa">
-                            <h3 class="title-w3-agileits title-black-wthree">About Our LASERENE THE COTTAGE</h3> 
+                            <h3 class="title-w3-agileits title-black-wthree">About Our LASERENE COTTAGE</h3> 
 						   <p class="about-para-w3ls">A beautiful emerald cottage surrounded by green hills and a web of walking tracks—there are plenty of picturesque places to visit and things to do in LASERENE THE COTTAGE. Nainital, located in the Kumaon region of Uttarakhand, often termed as “queen of lakes.” This is one of the most sought-after hill stations of North India adorned with a combination of picturesque Himalayan hills and lakes.
 						   </p>
-						   <img src="images/about.jpg" class="img-responsive" alt="Hair Salon">
+						   <img src="images/My Project.jpg" class="img-responsive" alt="Hair Salon">
 										<div class="w3l-slider-img">
-											<img src="images/a1.jpg" class="img-responsive" alt="Hair Salon">
+											<img src="images/g10.jpg" class="img-responsive" alt="Hair Salon">
 										</div>
                                        <div class="w3ls-info-about">
 										    <h4>You'll love all the amenities we offer!</h4>
@@ -246,6 +247,8 @@ include('db.php');
 			 		<p>The Internet is becoming the town square for the global village of tomorrow in regards 24x7 Wi-fi is available in the cottage .</p>
 					<p><i class="fa fa-check" aria-hidden="true"></i>Decorated room, proper air conditioned</p>
 					<p><i class="fa fa-check" aria-hidden="true"></i>Private balcony</p>
+					<p><i class="fa fa-check" aria-hidden="true"></i>Dry cleaning and laundry</p>
+					<p><i class="fa fa-check" aria-hidden="true"></i>Credit cards accepted</p>
 			 		
 			 	</div>
 			 </div>
@@ -256,6 +259,8 @@ include('db.php');
 			 		<p>LASERENE THE COTTAGE features a marvellous in-house restaurant this multi-cuisine eatery offers a wide range of lip-smacking vegetarian and non-vegetarian dishes.</p>
 					<p><i class="fa fa-check" aria-hidden="true"></i>24 hours room service</p>
 					<p><i class="fa fa-check" aria-hidden="true"></i>24-hour Concierge service</p>
+					<p><i class="fa fa-check" aria-hidden="true"></i>Cable TV</p>
+					<p><i class="fa fa-check" aria-hidden="true"></i>Reservation & confirmation</p>
 			 	</div>
 			 </div>
 			<div class="clearfix"> </div>
@@ -462,6 +467,22 @@ include('db.php');
 				</div>
 				<div class="clearfix"> </div>
 </section>
+<!-- Book now section -->
+<!-- <div class="chooseus spad set-bg" data-setbg="images/hero.jpg">
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <div class="chooseus__text">
+                        <div class="section-title">
+                             <h5>WHY CHOOSE US</h5>
+                            <h2>Contact us now to get your booking</h2>
+                        </div>
+                        <a href="#foot" class="primary-btn">Book Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div> -->
 <!-- //gallery -->
 	 <!-- rooms & rates -->
       <!-- <div class="plans-section" id="rooms">
@@ -567,21 +588,21 @@ include('db.php');
 	</div> -->
 	 <!--// rooms & rates -->
   <!-- visitors -->
-	<!-- <div class="w3l-visitors-agile" >
+	<div class="w3l-visitors-agile" >
 		<div class="container">
-                 <h3 class="title-w3-agileits title-black-wthree">What other visitors experienced</h3> 
+                 <h3 class="title-w3-agileits title-black-wthree">Visitors Experiences</h3> 
 		</div>
 		<div class="w3layouts_work_grids">
 			<section class="slider">
 				<div class="flexslider">
 					<ul class="slides">
 						<li>
-							<div class="w3layouts_work_grid_left">
+							<!-- <div class="w3layouts_work_grid_left">
 								<img src="images/5.jpg" alt=" " class="img-responsive" />
 								<div class="w3layouts_work_grid_left_pos">
 									<img src="images/c1.jpg" alt=" " class="img-responsive" />
 								</div>
-							</div>
+							</div> -->
 							<div class="w3layouts_work_grid_right">
 								<h4>
 								<i class="fa fa-star" aria-hidden="true"></i>
@@ -591,21 +612,19 @@ include('db.php');
 								<i class="fa fa-star" aria-hidden="true"></i>
 								Worth to come again
 								</h4>
-								<p>Sed tempus vestibulum lacus blandit faucibus. 
-									Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula, 
-									at imperdiet urna. </p>
-								<h5>Julia Rose</h5>
-								<p>Germany</p>
+								<p>This place is amazing located in the outskirts of Nainital. This place is a super worth coming and spending time with friends, families and colleagues. The location, the views , the hospitality , the food , the service , the rates everything is beyond comparison. What a place. The view from each cottage is like a heaven. This facility is a new set up and owner has made it with worth living for the travellers. </p>
+								<h5>Shaurya Malhotra</h5>
+								<p>Delhi</p>
 							</div>
 							<div class="clearfix"> </div>
 						</li>
 						<li>
-							<div class="w3layouts_work_grid_left">
+							<!-- <div class="w3layouts_work_grid_left">
 								<img src="images/5.jpg" alt=" " class="img-responsive" />
 								<div class="w3layouts_work_grid_left_pos">
 									<img src="images/c2.jpg" alt=" " class="img-responsive" />
 								</div>
-							</div>
+							</div> -->
 							<div class="w3layouts_work_grid_right">
 								<h4>
 								<i class="fa fa-star" aria-hidden="true"></i>
@@ -613,23 +632,21 @@ include('db.php');
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star-o" aria-hidden="true"></i>
-								Worth to come again
+								Must visit
 								</h4>
-								<p>Sed tempus vestibulum lacus blandit faucibus. 
-									Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula, 
-									at imperdiet urna. </p>
-								<h5>Jahnatan Smith</h5>
-								<p>United States</p>
+								<p>Staff- good and co-operative, clean rooms , nice location, surrounded by mountains, scenic views, home like food.</p>
+								<h5>Anushka Goel</h5>
+								<p>Surat</p>
 							</div>
 							<div class="clearfix"> </div>
 						</li>
 						<li>
-							<div class="w3layouts_work_grid_left">
+							<!-- <div class="w3layouts_work_grid_left">
 								<img src="images/5.jpg" alt=" " class="img-responsive" />
 								<div class="w3layouts_work_grid_left_pos">
 									<img src="images/c3.jpg" alt=" " class="img-responsive" />
 								</div>
-							</div>
+							</div> -->
 							<div class="w3layouts_work_grid_right">
 								<h4>
 								<i class="fa fa-star" aria-hidden="true"></i>
@@ -637,23 +654,21 @@ include('db.php');
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star-o" aria-hidden="true"></i>
-								Worth to come again
+								Nice Place
 								</h4>
-								<p>Sed tempus vestibulum lacus blandit faucibus. 
-									Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula, 
-									at imperdiet urna. </p>
-								<h5>Rosalind Cloer</h5>
-								<p>Italy</p>
+								<p>Undoubtedly an awesome place. Service is amazing and they are very humble. The valley view from the cottages is mesmerizing. Simply and great and amazing experience. I'm indeed touched with your hospitality. All in all it was my most memorable vacation with my family and I will be cherishing them all my life for sure. </p>
+								<h5>Naman Awasthi</h5>
+								<p>Bangalore</p>
 							</div>
 							<div class="clearfix"> </div>
 						</li>
 						<li>
-							<div class="w3layouts_work_grid_left">
+							<!-- <div class="w3layouts_work_grid_left">
 								<img src="images/5.jpg" alt=" " class="img-responsive" />
 								<div class="w3layouts_work_grid_left_pos">
 									<img src="images/c4.jpg" alt=" " class="img-responsive" />
 								</div>
-							</div>
+							</div> -->
 							<div class="w3layouts_work_grid_right">
 								<h4>
 								<i class="fa fa-star" aria-hidden="true"></i>
@@ -661,13 +676,11 @@ include('db.php');
 								<i class="fa fa-star" aria-hidden="true"></i>
 								<i class="fa fa-star-o" aria-hidden="true"></i>
 								<i class="fa fa-star-o" aria-hidden="true"></i>
-								Worth to come again
+								Mesmerizing view
 								</h4>
-								<p>Sed tempus vestibulum lacus blandit faucibus. 
-									Nunc imperdiet, diam nec rhoncus ullamcorper, nisl nulla suscipit ligula, 
-									at imperdiet urna. </p>
-								<h5>Amie Bublitz</h5>
-								<p>Switzerland</p>
+								<p>The hospitality and warmth extended by the host make it a really homely experience. It is a place filled with positive energy and just living in oneness with nature. This is one time one would love to just be cut off from the world. Its a different holiday experience especially for me. Beautiful place to revive yourself. Thank you for sharing your space with us. 🌻 Love to visit it again! </p>
+								<h5>Geetika Joshi</h5>
+								<p>Chamoli</p>
 							</div>
 							<div class="clearfix"> </div>
 						</li>
@@ -675,12 +688,12 @@ include('db.php');
 				</div>
 			</section>
 		</div>	
-	</div> -->
+	</div>
   <!-- visitors -->
 <!-- contact -->
 <section class="contact-w3ls" id="contact">
-	<div class="container">
-		<div class="col-lg-6 col-md-6 col-sm-6 contact-w3-agile2" data-aos="flip-left">
+	<div class="container foot">
+		<!-- <div class="col-lg-6 col-md-6 col-sm-6 contact-w3-agile2" data-aos="flip-left">
 			<div class="contact-agileits">
 				<h4>Contact Us</h4>
 				<p class="contact-agile2">Sign Up For Our News Letters</p>
@@ -726,7 +739,7 @@ include('db.php');
 				}
 				?>
 			</div>
-		</div>
+		</div> -->
 		<div class="col-lg-6 col-md-6 col-sm-6 contact-w3-agile1" data-aos="flip-right">
 			<h4>Connect With Us</h4>
 			<p class="contact-agile1"><strong>Phone :</strong>+91 - 8630690077 / +91 - 9318321161</p>
@@ -735,20 +748,20 @@ include('db.php');
 																
 			<div class="social-bnr-agileits footer-icons-agileinfo">
 				<ul class="social-icons3">
-								<li><a href="#" class="fa fa-facebook icon-border facebook"> </a></li>
-								<li><a href="#" class="fa fa-twitter icon-border twitter"> </a></li>
-								<li><a href="#" class="fa fa-google-plus icon-border googleplus"> </a></li> 
+								<li><a href="#" class="fa fa-facebook "> </a></li>
+								<li><a href="#" class="fa fa-twitter "> </a></li>
+								<li><a href="https://www.instagram.com/laserenethecottage/" class="fa fa-instagram "> </a></li> 
 								
 							</ul>
 			</div>
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3074.7905052320443!2d-77.84987248482734!3d39.586871613613056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c9f6a80ccf0661%3A0x7210426c67abc40!2sVirginia+Welcome+Center%2FSafety+Rest+Area!5e0!3m2!1sen!2sin!4v1485760915662" ></iframe>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d28618.731390239973!2d79.37402146272026!3d29.414134128141914!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8a832f6ba9aaad1a!2sLaSerene%20The%20Cottage!5e0!3m2!1sen!2sin!4v1665898133659!5m2!1sen!2sin" ></iframe>
 		</div>
 		<div class="clearfix"></div>
 	</div>
 </section>
 <!-- /contact -->
 			<div class="copy">
-		        <p>© 2017 SUNRISE . All Rights Reserved | Design by <a href="index.php">SUNRISE</a> </p>
+		        <p>© 2022 LASERENE THE COTTAGE . All Rights Reserved | Design by <a href="index.php">SUNRISE</a> </p>
 		    </div>
 <!--/footer -->
 <!-- js -->
