@@ -4,7 +4,16 @@ if(!isset($_SESSION["user"]))
 {
  header("location:index.php");
 }
+ob_start();
 ?> 
+
+<?php
+include('db.php');
+$rsql ="select id from meals";
+$rre=mysqli_query($con,$rsql);
+
+?>
+							 
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -60,7 +69,7 @@ if(!isset($_SESSION["user"]))
                 <ul class="nav" id="main-menu">
 
                 <li>
-                        <a  class="active-menu" href="settings.php"><i class="fa fa-dashboard"></i>Rooms Status</a>
+                        <a  href="settings.php"><i class="fa fa-dashboard"></i>Rooms Status</a>
                     </li>
 					<li>
                         <a   href="room.php"><i class="fa fa-plus-circle"></i>Add Room</a>
@@ -75,9 +84,8 @@ if(!isset($_SESSION["user"]))
                     </li>
 
                     <li>
-                        <a   href="mealsdel.php"><i class="fa fa-desktop"></i> Delete meals</a>
+                        <a  class="active-menu" href="mealsdel.php"><i class="fa fa-desktop"></i> Delete meals</a>
                     </li>
-					
 
                     
             </div>
@@ -85,20 +93,78 @@ if(!isset($_SESSION["user"]))
         </nav>
         <!-- /. NAV SIDE  -->
        
+        
+       
         <div id="page-wrapper" >
             <div id="page-inner">
 			 <div class="row">
                     <div class="col-md-12">
                         <h1 class="page-header">
-                           Available <small> Rooms</small>
+                           DELETE MEAL <small></small>
                         </h1>
                     </div>
                 </div> 
                  
                                  
-            <?php
+            <div class="row">
+                
+                <div class="col-md-12 col-sm-12">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                           Delete Meal
+                        </div>
+                        <div class="panel-body">
+						<form name="form" method="post">
+                            <div class="form-group">
+                                            <label>Select the Meal</label>
+                                            
+                                            <select name="id"  class="form-control" required>
+												<option value selected ></option>
+												<?php
+												while($rrow=mysqli_fetch_array($rre))
+												{
+                                                    
+												$value = $rrow['id'];
+                                                echo '$value';
+												 echo '<option value="'.$value.'">'.$value.'</option>';
+												}
+												?>
+                                                
+                                            </select>
+                              </div>
+							  
+								
+							 <input type="submit" name="del" value="Delete Meal" class="btn btn-primary"> 
+							</form>
+							<?php
+							 include('db.php');
+							 
+							 if(isset($_POST['del']))
+							 {
+								$did = $_POST['id'];
+								
+								
+								$sql ="DELETE FROM `meals` WHERE id = '$did'" ;
+								if(mysqli_query($con,$sql))
+								{
+								 echo '<script type="text/javascript">alert("Meal deleted") </scri>' ;
+										
+										header("Location: mealsdel.php");
+								}else {
+									echo '<script>alert("Sorry ! Check The System") </script>' ;
+								}
+							 }
+							
+							?>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                  
+           <?php
 						include ('db.php');
-						$sql = "select * from room";
+						$sql = "select * from meals";
 						$re = mysqli_query($con,$sql)
 				?>
                 <div class="row">
@@ -108,78 +174,69 @@ if(!isset($_SESSION["user"]))
 										while($row= mysqli_fetch_array($re))
 										{
 												$id = $row['type'];
-											if($id == "Superior Room") 
+											if($id == "Lunch") 
 											{
 												echo"<div class='col-md-3 col-sm-12 col-xs-12'>
 													<div class='panel panel-primary text-center no-boder bg-color-blue'>
 														<div class='panel-body'>
 															<i class='fa fa-users fa-5x'></i>
-															<h3>".$row['particulats']."</h3>
+															<h3>".$row['type']."</h3>
 														</div>
-														<div class='panel-footer back-footer-blue'>
-															".$row['type']."
+                                                        <div class='panel-footer back-footer-green'>
+															".$row['price']."
 
 														</div>
+														
 													</div>
 												</div>";
 											}
-											else if ($id == "Deluxe Room")
+											else if ($id == "Dinner")
 											{
 												echo"<div class='col-md-3 col-sm-12 col-xs-12'>
 													<div class='panel panel-primary text-center no-boder bg-color-green'>
 														<div class='panel-body'>
 															<i class='fa fa-users fa-5x'></i>
-															<h3>".$row['particulars']."</h3>
+															<h3>".$row['type']."</h3>
 														</div>
-														<div class='panel-footer back-footer-green'>
-															".$row['type']."
+                                                        <div class='panel-footer back-footer-green'>
+															".$row['price']."
 
 														</div>
+														
 													</div>
 												</div>";
 											
 											}
-											else if($id =="Guest House")
+                                            else if ($id == "Both")
 											{
 												echo"<div class='col-md-3 col-sm-12 col-xs-12'>
-													<div class='panel panel-primary text-center no-boder bg-color-brown'>
+													<div class='panel panel-primary text-center no-boder bg-color-green'>
 														<div class='panel-body'>
 															<i class='fa fa-users fa-5x'></i>
-															<h3>".$row['particulars']."</h3>
+															<h3>".$row['type']."</h3>
 														</div>
-														<div class='panel-footer back-footer-brown'>
-															".$row['type']."
+                                                        <div class='panel-footer back-footer-green'>
+															".$row['price']."
 
 														</div>
+														
 													</div>
 												</div>";
 											
 											}
-											else if($id =="Single Room")
-											{
-												echo"<div class='col-md-3 col-sm-12 col-xs-12'>
-													<div class='panel panel-primary text-center no-boder bg-color-red'>
-														<div class='panel-body'>
-															<i class='fa fa-users fa-5x'></i>
-															<h3>".$row['particulars']."</h3>
-														</div>
-														<div class='panel-footer back-footer-red'>
-															".$row['type']."
-
-														</div>
-													</div>
-												</div>";
-											
-											}
+										
 										}
 									?>
                     
                 </div>
-                <!-- /. ROW  -->
-                
-                                
-                  
+            <?php
+				
+			ob_end_flush();
+			?>
+                    
             
+				
+					</div>
 			 <!-- /. PAGE INNER  -->
             </div>
          <!-- /. PAGE WRAPPER  -->

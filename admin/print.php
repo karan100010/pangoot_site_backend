@@ -175,7 +175,7 @@ tr:hover .cut { opacity: 1; }
 	while($row=mysqli_fetch_array($re))
 	{
 		$id = $row['id'];
-		$title = $row['title'];
+	
 		$fname = $row['fname'];
 		$lname = $row['lname'];
 		$troom = $row['troom'];
@@ -265,7 +265,7 @@ tr:hover .cut { opacity: 1; }
 		<article>
 			<h1>Recipient</h1>
 			<address >
-				<p><?php echo $title.$fname." ".$lname ?> <br></p>
+				<p><?php echo $fname." ".$lname ?> <br></p>
 			</address>
 			<table class="meta">
 				<tr>

@@ -68,14 +68,23 @@ $rre=mysqli_query($con,$rsql);
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
 
-                    <li>
-                        <a  href="settings.php"><i class="fa fa-dashboard"></i>Room Status</a>
+				<li>
+                        <a  href="settings.php"><i class="fa fa-dashboard"></i>Rooms Status</a>
                     </li>
 					<li>
                         <a   href="room.php"><i class="fa fa-plus-circle"></i>Add Room</a>
                     </li>
+                    
                     <li>
-                        <a  class="active-menu" href="roomdel.php"><i class="fa fa-pencil-square-o"></i> Delete Room</a>
+                        <a  class="active-menu"  href="roomdel.php"><i class="fa fa-desktop"></i> Delete Room</a>
+                    </li>
+
+                    <li>
+                        <a    href="meals.php"><i class="fa fa-plus-circle"></i>Add meals</a>
+                    </li>
+
+                    <li>
+                        <a  href="mealsdel.php"><i class="fa fa-desktop"></i> Delete meals</a>
                     </li>
 					
 
@@ -170,7 +179,7 @@ $rre=mysqli_query($con,$rsql);
 													<div class='panel panel-primary text-center no-boder bg-color-blue'>
 														<div class='panel-body'>
 															<i class='fa fa-users fa-5x'></i>
-															<h3>".$row['bedding']."</h3>
+															<h3>".$row['particulars']."</h3>
 														</div>
 														<div class='panel-footer back-footer-blue'>
 															".$row['type']."
@@ -185,7 +194,7 @@ $rre=mysqli_query($con,$rsql);
 													<div class='panel panel-primary text-center no-boder bg-color-green'>
 														<div class='panel-body'>
 															<i class='fa fa-users fa-5x'></i>
-															<h3>".$row['bedding']."</h3>
+															<h3>".$row['particulars']."</h3>
 														</div>
 														<div class='panel-footer back-footer-green'>
 															".$row['type']."
@@ -201,7 +210,7 @@ $rre=mysqli_query($con,$rsql);
 													<div class='panel panel-primary text-center no-boder bg-color-brown'>
 														<div class='panel-body'>
 															<i class='fa fa-users fa-5x'></i>
-															<h3>".$row['bedding']."</h3>
+															<h3>".$row['particulars']."</h3>
 														</div>
 														<div class='panel-footer back-footer-brown'>
 															".$row['type']."
@@ -217,7 +226,7 @@ $rre=mysqli_query($con,$rsql);
 													<div class='panel panel-primary text-center no-boder bg-color-red'>
 														<div class='panel-body'>
 															<i class='fa fa-users fa-5x'></i>
-															<h3>".$row['bedding']."</h3>
+															<h3>".$row['particulars']."</h3>
 														</div>
 														<div class='panel-footer back-footer-red'>
 															".$row['type']."

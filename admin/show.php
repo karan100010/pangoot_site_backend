@@ -172,15 +172,12 @@ tr:hover .cut { opacity: 1; }
 	while($row=mysqli_fetch_array($re))
 	{
 		$id = $row['id'];
-		$title =  $row['Title'];
 		$Fname = $row['FName'];
 		$lname = $row['LName'];
 		$email = $row['Email'];
-		$National = $row['National'];
-		$country = $row['Country'];
 		$phone = $row['Phone'];
 		$room_type = $row['TRoom'];
-		$Bed_type = $row['Bed'];
+		$Bed_type = $row['Particulars'];
 		//$Noof_room = $row['Nroom'];
 		$meal_type = $row['Meal'];
 		$cin_date = $row['cin'];
@@ -194,9 +191,9 @@ tr:hover .cut { opacity: 1; }
 		<header>
 			<h1>Information of Guest</h1>
 			<address >
-				<p>name of hotel,</p>
-				<p>location<br>state,<br>address.</p>
-				<p>+91********</p>
+				<p>Laserene Cottage</p>
+				<p>Vill. Baggar Talla,<br> Po. Pangot, Dist. Nainital,<br> Uttarakhand,<br> India - 263001</p>
+				<p>+91 - 8630690077 / +91 - 9318321161</p>
 			</address>
 			<!-- <span><img alt="" src="assets/img/sun.png"></span> -->
 		</header>
@@ -205,7 +202,7 @@ tr:hover .cut { opacity: 1; }
 			<address >
 				
 				<p><br></p>
-				<p>Coustomer Name  : -  <?php echo $title.$Fname." ".$lname;?><br></p>
+				<p>Coustomer Name  : -  <?php echo $Fname." ".$lname;?><br></p>
 			</address>
 			<table class="meta">
 				<tr>
@@ -228,10 +225,10 @@ tr:hover .cut { opacity: 1; }
 						
 						<td>Customer email : -  <?php echo $email; ?> </td>
 					</tr>
-					<tr> 
+					<!-- <tr> 
 						<td>Customer Country : -  <?php echo $country; ?> </td>
 						<td>Customer National : -  <?php echo $National; ?> </td>
-					</tr>
+					</tr> -->
 				</table>
 				<br>
 				<br>
@@ -251,7 +248,7 @@ tr:hover .cut { opacity: 1; }
 						
 					</tr>
 					<tr>
-						<td><span ><?php echo $Bed_type; ?>  Bed </span></td>
+						<td><span ><?php echo $Bed_type; ?> Bed </span></td>
 						<td><span ><?php echo $nodays; ?></span></td>
 						
 					</tr>
@@ -268,7 +265,7 @@ tr:hover .cut { opacity: 1; }
 		<aside>
 			<h1><span >Contact us</span></h1>
 			<div >
-				<p align="center">Email :- xyz@gmail.com || Web :- www.xxxx.com || Phone :- +94 65 xxxxxx 55 </p>
+				<p align="center">Email :- info@laserenethecottage.com || Web :- www.laserenethecottage.com || <br>Phone :- +91 - 8630690077 / +91 - 9318321161 </p>
 			</div>
 		</aside>
 	</body>

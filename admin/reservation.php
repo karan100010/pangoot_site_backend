@@ -52,7 +52,7 @@ include('db.php')
                         </div>
                         <div class="panel-body">
 						<form name="form" method="post">
-                            <div class="form-group">
+                            <!-- <div class="form-group">
                                             <label>Title*</label>
                                             <select name="title" class="form-control" required >
 												<option value selected ></option>
@@ -60,7 +60,7 @@ include('db.php')
                                                 <option value="Mr.">Mr.</option>
                                                 <option value="Mrs.">Mrs.</option>
                                             </select>
-                              </div>
+                              </div> -->
 							  <div class="form-group">
                                             <label>First Name</label>
                                             <input name="fname" class="form-control" required>
@@ -123,59 +123,52 @@ include('db.php')
                         <div class="panel-body">
 								<div class="form-group">
                                             <label>Type Of Room *</label>
-                                            <select name="troom"  class="form-control" required>
+                                <select name="troom" id="troom" class="form-control" required>
 												<option value selected ></option>
                                                 <option value="Superior Room">SUPERIOR ROOM</option>
                                                 <option value="Deluxe Room">DELUXE ROOM</option>
 												<option value="Guest House">GUEST HOUSE</option>
 												<option value="Single Room">SINGLE ROOM</option>
-                                            </select>
+                                </select>
                               </div>
 							  <div class="form-group">
-                                            <label>Bedding Type</label>
-                                            <select name="bed" class="form-control" required>
+                                            <label>Particulars</label>
+                                <select name="particulars" id="particulars" class="form-control" required>
 												<option value selected ></option>
-                                                <option value="Single">Single</option>
-                                                <option value="Double">Double</option>
-												<option value="Triple">Triple</option>
-                                                <option value="Quad">Quad</option>
-												<option value="None">None</option>
-                                                
-                                             
-                                            </select>
+                                                <option value="Single Occupancy">Single Occupancy</option>
+                                                <option value="Double Occupancy">Double Occupancy</option>
+												<option value="Triple Occupancy">Triple Occupancy</option>
+												<option value="Quard Occupancy">Quard Occupancy</option>
+                                </select>
                               </div>
 							  <div class="form-group">
                                             <label>No.of Rooms *</label>
                                             <select name="nroom" class="form-control" required>
 												<option value selected ></option>
                                                 <option value="1">1</option>
-                                              <!--  <option value="2">2</option>
-												<option value="3">3</option>
-												<option value="4">4</option>
-												<option value="5">5</option>
-												<option value="6">6</option>
-												<option value="7">7</option> -->
+                                               <option value="2">2</option>
                                             </select>
                               </div>
-							 
-							 
+                              <div class="form-group">
+                                            <label>Extra bedding</label>
+                                            <select name="ebed" class="form-control" required>
+												<option value selected ></option>
+                                                <option value="1">1</option>
+                                               <option value="2">2</option>
+                                            </select>
+                              </div>
 							  <div class="form-group">
                                             <label>Meal Plan</label>
                                             <select name="meal" class="form-control"required>
 												<option value selected ></option>
-                                                <option value="Room only">Room only</option>
-                                                <option value="Breakfast">Breakfast</option>
-												<option value="Half Board">Half Board</option>
-												<option value="Full Board">Full Board</option>
-												
-                                                
-                                             
+                                                <option value="Lunch">Lunch</option>
+                                                <option value="Dinner">Dinner</option>
+												<option value="Both">Both</option>
                                             </select>
                               </div>
 							  <div class="form-group">
                                             <label>Check-In</label>
-                                            <input name="cin" type ="date" class="form-control">
-                                            
+                                            <input name="cin" type ="date" class="form-control">       
                                </div>
 							   <div class="form-group">
                                             <label>Check-Out</label>
@@ -212,17 +205,20 @@ include('db.php')
 									$check="SELECT * FROM roombook WHERE email = '$_POST[email]' AND cin = '$_POST[cin]'";
 									$rs = mysqli_query($con,$check);
 									$data = mysqli_fetch_array($rs, MYSQLI_NUM);
-									if(isset($data[0])){
-                                        if($data[0] > 10) {
-                                        //kj changed this from 1 to 10
-                                            echo "<script type='text/javascript'> alert('User Already in Exists')</script>";										
-                                        }
-                                }
-                                
-									else
-									{
 										$new ="Not Conform";
-										$newUser="INSERT INTO `roombook`(`Title`, `FName`, `LName`, `Email`, `Phone`, `TRoom`, `Bed`, `NRoom`, `Meal`, `cin`, `cout`,`stat`,`nodays`) VALUES ('$_POST[title]','$_POST[fname]','$_POST[lname]','$_POST[email]','$_POST[phone]','$_POST[troom]','$_POST[bed]','$_POST[nroom]','$_POST[meal]','$_POST[cin]','$_POST[cout]','$new',datediff('$_POST[cout]','$_POST[cin]'))";
+                                        $fname = $_POST['fname'];
+                                        $lname =  $_POST['lname'];
+                                        $email =  $_POST['email'];
+                                        $phone =  $_POST['phone'];
+                                        $troom =  $_POST['troom'];
+                                        $particulars =  $_POST['particulars'];
+                                        $nroom =  $_POST['nroom'];
+                                        $ebed =  $_POST['ebed'];
+                                        $meal =  $_POST['meal'];
+                                        $cin = $_POST['cin'];
+                                        $cout =  $_POST['cout'];
+
+										$newUser="INSERT INTO `roombook`( `FName`, `LName`, `Email`, `Phone`, `TRoom`, `Particulars`, `NRoom`,`Extra bedding`,`Meal`, `cin`, `cout`,`stat`,`nodays`)  VALUES ('$fname','$lname','$email','$phone','$troom','$particulars','$nroom','$ebed','$meal','$cin','$cout','$new',datediff('$cout','$cin'))";
 										if (mysqli_query($con,$newUser))
 										{
 											echo "<script type='text/javascript'> alert('Your Booking application has been sent')</script>";
@@ -237,7 +233,7 @@ include('db.php')
 
 							$msg="Your code is correct";
 							}
-							}
+							
 							?>
 						</form>
 							
@@ -255,11 +251,71 @@ include('db.php')
             </div>
          <!-- /. PAGE WRAPPER  -->
         </div>
+
+
+        <script>
+
+
+// var s = document.getElementById('troom');;
+// s.addEventListener("change", changeOrg);
+// function changeOrg(){
+//   var value = s.options[s.selectedIndex].value;
+//   switch(value)
+//   {
+//    case "Superior Room"   :
+
+//     <?php
+//     include('db.php');
+//     $con=mysqli_connect("localhost","root","","hotel");
+    
+//     $check="SELECT * FROM room WHERE var =`Superior Room`";
+    
+// 	$rs = mysqli_query($con,$check);
+// 	$data = mysqli_fetch_array($rs, MYSQLI_NUM);
+//     echo $value;
+    
+
+//     ?>
+
+        
+    
+//     break;
+
+//     case "Deluxe Room" :
+        
+//     // $("#Triple_occupancy").removeAttr("disabled");
+//     // $("#Double_occupancy").removeAttr("disabled");
+//     // $("#Quard_occupancy").prop('disabled', true);
+//     break;
+
+//     case "Guest House" :
+       
+//     // $("#Quard_occupancy").removeAttr("disabled");
+//     // $("#Triple_occupancy").removeAttr("disabled");
+//     // $("#Double_occupancy").removeAttr("disabled");
+//     break;
+//     case "Single Room" :
+        
+//     // $("#Quard_occupancy").removeAttr("disabled");
+//     // $("#Triple_occupancy").removeAttr("disabled");
+//     // $("#Double_occupancy").removeAttr("disabled");
+//     break;
+//    default:
+  
+// //    $("#Double_occupancy").prop('disabled', true);
+// //    $("#Triple_occupancy").prop('disabled', true);
+// //    $("#Quard_occupancy").prop('disabled', true);
+//   }
+// }
+//on page load
+changeOrg();
+        </script$value>
      <!-- /. WRAPPER  -->
     <!-- JS Scripts-->
     <!-- jQuery Js -->
     <script src="assets/js/jquery-1.10.2.js"></script>
       <!-- Bootstrap Js -->
+
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- Metis Menu Js -->
     <script src="assets/js/jquery.metisMenu.js"></script>
