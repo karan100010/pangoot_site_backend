@@ -493,7 +493,7 @@ if(!isset($_SESSION["user"]))
 												 $type_of_room = 0;       
 														if($troom=="Superior Room")
 														{
-															$type_of_room = 320;
+															$type_of_room = 500;
 														
 														}
 														else if($troom=="Deluxe Room")
@@ -563,7 +563,7 @@ if(!isset($_SESSION["user"]))
 														if(mysqli_query($con,$psql))
 														{	$notfree="NotFree";
 															//update only the firest instence if the place is free
-															$rsql ="UPDATE `room` SET `place`='$notfree',`cusid`='$id' where bedding ='$bed' AND type='$troom' AND place='Free' LIMIT 1";
+															$rsql ="UPDATE `room` SET `place`='$notfree',`cusid`='$id' where bedding ='$bed' AND type='$troom' AND place='Free' LIMIT $nroom";
 
 											
 	
