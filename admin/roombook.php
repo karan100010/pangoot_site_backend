@@ -498,16 +498,12 @@ if(!isset($_SESSION["user"]))
 												 $type_of_room = 0;       
 														if($troom=="Superior Room")
 														{
-<<<<<<< HEAD
-															$type_of_room = 500;
-=======
 															
 															
 															$type_of_room=320;
 														
 															
 														
->>>>>>> 2c3ba976f4dd95cb99420649046a65a933539a30
 														
 														}
 														else if($troom=="Deluxe Room")

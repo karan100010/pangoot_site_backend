@@ -23,13 +23,13 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 --
---Table struxture meals
+
 --
 CREATE TABLE IF NOT EXISTS `meals` (
 `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `type` varchar(100) DEFAULT NULL,
-  `price` int,
-  PRIMARY KEY (id)
+`type` varchar(100) DEFAULT NULL,
+`price` int(10),
+PRIMARY KEY (id)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 --
