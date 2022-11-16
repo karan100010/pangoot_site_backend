@@ -124,7 +124,7 @@ include('db.php')
 								<div class="form-group">
                                             <label>Type Of Room *</label>
                                             <select name="troom"  class="form-control" required>
-												<option value selected ></option>
+												
                                                 <option value="Superior Room">SUPERIOR ROOM</option>
                                                 <option value="Deluxe Room">DELUXE ROOM</option>
 												<option value="Guest House">GUEST HOUSE</option>
@@ -148,13 +148,44 @@ include('db.php')
                                             <label>No.of Rooms *</label>
                                             <select name="nroom" class="form-control" required>
 												<option value selected ></option>
-                                                <option value="1">1</option>
-                                              <!--  <option value="2">2</option>
-												<option value="3">3</option>
-												<option value="4">4</option>
-												<option value="5">5</option>
-												<option value="6">6</option>
-												<option value="7">7</option> -->
+                                                <?php
+                                                //get the selected menu item name troom
+                                                $echo($_POST['troom']);
+                                                $troom = $_POST['troom'];
+                                                if($troom == "Superior Room"){
+                                                    $rrow= "SELECT * FROM room WHERE room_type = 'Superior Room'";
+												while($rrow=mysqli_fetch_array($rre))
+												{
+												$value = $rrow['id'];
+                                                //value lenth is 0 echo error
+    
+												 echo '<option value="'.$value.'">'.$value.'</option>';
+												
+												}}
+                                                else if($troom == "Deluxe Room"){
+                                                    $rrow= "SELECT * FROM room WHERE room_type = 'Deluxe Room'";
+                                                while($rrow=mysqli_fetch_array($rre))
+                                                {
+                                                $value = $rrow['id'];
+                                                 echo '<option value="'.$value.'">'.$value.'</option>';
+                                                
+                                                }}
+                                                else if($troom == "Guest House"){
+                                                    $rrow= "SELECT * FROM room WHERE room_type = 'Guest House'";
+                                                while($rrow=mysqli_fetch_array($rre))
+
+                                                {
+                                                $value = $rrow['id'];
+                                                 echo '<option value="'.$value.'">'.$value.'</option>';
+                                                
+                                                }}
+                                                else if($troom == "Single Room"){
+                                                    $rrow= "SELECT * FROM room WHERE room_type = 'Single Room'";
+                                                }
+                                                else{
+                                                    echo "<script type='text/javascript'> alert('User Already in Exists')</script>";
+                                                }
+												?>
                                             </select>
                               </div>
 							 
