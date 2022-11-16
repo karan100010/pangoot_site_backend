@@ -191,66 +191,13 @@ tr:hover .cut { opacity: 1; }
 		$days = $row['noofdays'];
 		
 		
-		
-	
 	}
 	
-									$type_of_room = 0;       
-									if($troom=="Superior Room")
-									{
-										$type_of_room = 500;
+									$type_of_room = $ttot/($days*$nroom);;     
 									
-									}
-									else if($troom=="Deluxe Room")
-									{
-										$type_of_room = 220;
-									}
-									else if($troom=="Guest House")
-									{
-										$type_of_room = 180;
-									}
-									else if($troom=="Single Room")
-									{
-										$type_of_room = 150;
-									}
 									
-									if($bed=="Single")
-									{
-										$type_of_bed = $type_of_room * 1/100;
-									}
-									else if($bed=="Double")
-									{
-										$type_of_bed = $type_of_room * 2/100;
-									}
-									else if($bed=="Triple")
-									{
-										$type_of_bed = $type_of_room * 3/100;
-									}
-									else if($bed=="Quad")
-									{
-										$type_of_bed = $type_of_room * 4/100;
-									}
-									else if($bed=="None")
-									{
-										$type_of_bed = $type_of_room * 0/100;
-									}
-									
-									if($meal=="Room only")
-									{
-										$type_of_meal=$type_of_bed * 0;
-									}
-									else if($meal=="Breakfast")
-									{
-										$type_of_meal=$type_of_bed * 2;
-									}else if($meal=="Half Board")
-									{
-										$type_of_meal=$type_of_bed * 3;
-									
-									}else if($meal=="Full Board")
-									{
-										$type_of_meal=$type_of_bed * 4;
-									}
-	
+									$type_of_bed = $btot/$days;
+									$type_of_meal=$mepr/$days
 	?>
 		<header>
 			<h1>Invoice</h1>

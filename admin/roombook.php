@@ -275,10 +275,7 @@ if(!isset($_SESSION["user"]))
 						$dr = 0;
 						while($rrow=mysqli_fetch_array($rre))
 						{
-							$price1 =$_POST['single_price'];
-							$price2 =$_POST['double_price'];
-							$price3 =$_POST['triple_price'];
-							$price4 =$_POST['quard_price'];
+							
 
 							$r = $r + 1;
 							$s = $rrow['type'];
@@ -465,13 +462,20 @@ if(!isset($_SESSION["user"]))
 
 <?php
 //echo each item in $_POST
+$roomsql="SELECT * FROM room WHERE type='$troom' LIMIT 1";
+$rrow=mysqli_query($con,$roomsql);
+$room=mysqli_fetch_array($rrow);
 
-
-
+$price1 =$room['single_price'];
+$price2 =$room['double_price'];
+$price3 =$room['triple_price'];
+$price4 =$room['quard_price'];
+$price5 =$room['extra bedding'];
 
 						if(isset($_POST['co']))
 						{	
 							$st = $_POST['conf'];
+							
 							
 							 
 							
@@ -502,20 +506,20 @@ if(!isset($_SESSION["user"]))
 												echo "<script type='text/javascript'> alert('Guest Room booking is conform')</script>";
 												echo "<script type='text/javascript'> window.location='home.php'</script>";
 												 $type_of_room = 0;       
-														if($particulars=="Single occ")
+														if($particulars=="Single Occupancy")
 														{
 															$type_of_room = $price1;
 														
 														}
-														else if($particulars=="Double occ")
+														else if($particulars=="Double Occupancy")
 														{
 															$type_of_room = $price1+ $price2;
 														}
-														else if($particulars=="Triple occ")
+														else if($particulars=="Triple Occupancy")
 														{
 															$type_of_room = $price1+ $price2 + $price3;
 														}
-														else if($particulars=="Quard occu")
+														else if($particulars=="Quard Occupancy")
 														{
 															$type_of_room = $price1+ $price2 + $price3+ $price4;
 														}
@@ -523,38 +527,58 @@ if(!isset($_SESSION["user"]))
 														
 														
 														
-														if($ebed=="0")
-														{
-															$type_of_bed = 0;
-														}
-														else if($bed=="1")
-														{
-															$type_of_bed = 650;
-														}
-														else if($bed=="2")
-														{
-															$type_of_bed = 1300;
-														}
-														
-														
+														$sql_lunch ="SELECT * FROM `meals` WHERE `type` = 'Lunch'";
+														$result_lunch = mysqli_query($con,$sql_lunch);
+														$sql_dinner ="SELECT * FROM `meals` WHERE `type` = 'Dinner'";
+														$result_dinner = mysqli_query($con,$sql_dinner);
+                                                        $dinner=
+														$sql_both="SELECT * FROM `meals` WHERE `type` = 'Both'";
+														$result_both = mysqli_query($con,$sql_both);
+														$sql="SELECT * FROM roombook WHERE id = '$id'";
+                                                        $row = $result_lunch->fetch_assoc();
+                                                        $row1= $result_dinner->fetch_assoc();
+                                                        $row2= $result_both->fetch_assoc();
+                                                        //echo array $row;
+                                                        $Lunch= $row['price'];
+                                                        $Dinner= $row1["price"];
+                                                        $Both= $row2["price"];
+
+
+                                                        
+													
+														$re = mysqli_query($con,$sql);
 														
 														if($meal=="")
-														{
-															$type_of_meal=$type_of_bed * 0;
-														}
-														else if($meal=="Lunch")
-														{
-															$type_of_meal= $row['price'];
-														}else if($meal=="Dinner")
-														{
-															$type_of_meal= $row['price'];
+															{
+																$type_of_meal= 0;
+
+															}
+															else if($meal=="Lunch")
+															{
+																$type_of_meal= $Lunch;
+
+                                                                echo $type_of_meal;
+															}else if($meal=="Dinner")
+															{
+																$type_of_meal= $Dinner;
+															
+															}else if($meal=="Both")
+															{
+																$type_of_meal= $Both;
+															}
+															if($ebed==""){
+																$type_of_bed=0;
+															}
+															else if($ebed==1){
+																$type_of_bed=$price4;
+															}
+															else if($ebed==2){
+																$type_of_bed=$price4*2;
+															}
+
 														
-														}else if($meal=="Both")
-														{
-															$type_of_meal= $row['price'];
-														}
 														
-														
+													
 														$ttot = $type_of_room * $days * $nroom;
 														$mepr = $type_of_meal * $days;
 														$btot = $type_of_bed *$days;
@@ -567,8 +591,7 @@ if(!isset($_SESSION["user"]))
 														if(mysqli_query($con,$psql))
 														{	$notfree="NotFree";
 															//update only the firest instence if the place is free
-															$rsql ="UPDATE `room` SET `place`='$notfree',`cusid`='$id' where bedding ='$bed' AND type='$troom' AND place='Free' LIMIT $nroom";
-
+															$rsql ="UPDATE room SET `place`='NotFree',`cusid`='$id' WHERE place='Free' AND type='$troom' LIMIT $nroom ;";
 											
 	
 															if(mysqli_query($con,$rsql))

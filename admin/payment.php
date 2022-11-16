@@ -128,6 +128,7 @@ if(!isset($_SESSION["user"]))
                                         
 									<?php
 										include ('db.php');
+                                       
 										$sql="select * from payment";
 										$re = mysqli_query($con,$sql);
 										while($row = mysqli_fetch_array($re))
@@ -145,7 +146,6 @@ if(!isset($_SESSION["user"]))
 													<td>".$row['cout']."</td>
 													<td>".$row['nroom']."</td>
 													<td>".$row['meal']."</td>
-													
 													<td>".$row['ttot']."</td>
 													<td>".$row['mepr']."</td>
 													<td>".$row['btot']."</td>
