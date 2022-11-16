@@ -280,17 +280,17 @@ if(!isset($_SESSION["user"]))
                                     </div>
 									
                                 </div>
-                                <?php
+                         <?php
 								
-								$fsql = "SELECT * FROM `contact`";
-								$fre = mysqli_query($con,$fsql);
-								$f =0;
-								while($row=mysqli_fetch_array($fre) )
-								{
-										$f = $f + 1;
+								// $fsql = "SELECT * FROM `contact`";
+								// $fre = mysqli_query($con,$fsql);
+								// $f =0;
+								// while($row=mysqli_fetch_array($fre) )
+								// {
+								// 		$f = $f + 1;
 								
-								}
-						
+								// }
+					
 								?>
                                 <!-- <div class="panel panel-danger">
                                     <div class="panel-heading">
