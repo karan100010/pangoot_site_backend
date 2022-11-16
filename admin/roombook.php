@@ -275,6 +275,11 @@ if(!isset($_SESSION["user"]))
 						$dr = 0;
 						while($rrow=mysqli_fetch_array($rre))
 						{
+							$price1 =$_POST['single_price'];
+							$price2 =$_POST['double_price'];
+							$price3 =$_POST['triple_price'];
+							$price4 =$_POST['quard_price'];
+
 							$r = $r + 1;
 							$s = $rrow['type'];
 							
@@ -463,6 +468,7 @@ if(!isset($_SESSION["user"]))
 
 
 
+
 						if(isset($_POST['co']))
 						{	
 							$st = $_POST['conf'];
@@ -496,63 +502,56 @@ if(!isset($_SESSION["user"]))
 												echo "<script type='text/javascript'> alert('Guest Room booking is conform')</script>";
 												echo "<script type='text/javascript'> window.location='home.php'</script>";
 												 $type_of_room = 0;       
-														if($troom=="Superior Room")
+														if($particulars=="Single occ")
 														{
-															$type_of_room = 500;
+															$type_of_room = $price1;
 														
 														}
-														else if($troom=="Deluxe Room")
+														else if($particulars=="Double occ")
 														{
-															$type_of_room = 220;
+															$type_of_room = $price1+ $price2;
 														}
-														else if($troom=="Guest House")
+														else if($particulars=="Triple occ")
 														{
-															$type_of_room = 180;
+															$type_of_room = $price1+ $price2 + $price3;
 														}
-														else if($troom=="Single Room")
+														else if($particulars=="Quard occu")
 														{
-															$type_of_room = 150;
-														}
-														
-														
-														
-														
-														if($bed=="Single")
-														{
-															$type_of_bed = $type_of_room * 1/100;
-														}
-														else if($bed=="Double")
-														{
-															$type_of_bed = $type_of_room * 2/100;
-														}
-														else if($bed=="Triple")
-														{
-															$type_of_bed = $type_of_room * 3/100;
-														}
-														else if($bed=="Quad")
-														{
-															$type_of_bed = $type_of_room * 4/100;
-														}
-														else if($bed=="None")
-														{
-															$type_of_bed = $type_of_room * 0/100;
+															$type_of_room = $price1+ $price2 + $price3+ $price4;
 														}
 														
 														
-														if($meal=="Room only")
+														
+														
+														if($ebed=="0")
+														{
+															$type_of_bed = 0;
+														}
+														else if($bed=="1")
+														{
+															$type_of_bed = 650;
+														}
+														else if($bed=="2")
+														{
+															$type_of_bed = 1300;
+														}
+														
+														
+														
+														if($meal=="")
 														{
 															$type_of_meal=$type_of_bed * 0;
 														}
-														else if($meal=="Breakfast")
+														else if($meal=="Lunch")
 														{
-															$type_of_meal=$type_of_bed * 2;
-														}else if($meal=="Half Board")
+															$type_of_meal= $row['price'];
+														}else if($meal=="Dinner")
 														{
-															$type_of_meal=$type_of_bed * 3;
+															$type_of_meal= $row['price'];
 														
-														}else if($meal=="Full Board")
+														}else if($meal=="Both")
 														{
-															$type_of_meal=$type_of_bed * 4;
+															$type_of_meal= $row['price'];
 														}
 														
 														
@@ -563,7 +562,7 @@ if(!isset($_SESSION["user"]))
 														$fintot = $ttot + $mepr + $btot ;
 															
 															//echo "<script type='text/javascript'> alert('$count_date')</script>";
-														$psql = "INSERT INTO `payment`(`id`, `fname`, `lname`, `troom`, `tbed`, `nroom`, `cin`, `cout`, `ttot`,`meal`, `mepr`, `btot`,`fintot`,`noofdays`) VALUES ('$id','$fname','$lname','$troom','$bed','$nroom','$cin','$cout','$ttot','$meal','$mepr','$btot','$fintot','$days')";
+														$psql = "INSERT INTO `payment`(`id`, `fname`, `lname`, `troom`, `tbed`, `nroom`, `cin`, `cout`, `ttot`,`meal`, `mepr`, `btot`,`fintot`,`noofdays`) VALUES ('$id','$fname','$lname','$troom','$particulars','$nroom','$cin','$cout','$ttot','$meal','$mepr','$btot','$fintot','$days')";
 														
 														if(mysqli_query($con,$psql))
 														{	$notfree="NotFree";

@@ -181,12 +181,14 @@ if(!isset($_SESSION["user"]))
                                                 // echo "<script type='text/javascript'> alert('Room Already in Exists')</script>";
                                             // for i in l    
                                             $sql ="INSERT INTO `room`( `type`,`particulars`,`extra bedding`,`single_price`,`double_price`,`triple_price`,`quard_price`,`place`) VALUES ('$room','$particulars','$ebed','$price1','$price2','$price3','$price4','$place')";
+                                            $flag =0;
                                             for($i=0;$i<$no_of_rooms;$i++){
                                                 $result = mysqli_query($con,$sql);
+                                                $flag = 1;
                                             }
                             
                                           
-                                            if(mysqli_query($con,$sql))
+                                            if($flag)
                                             {
                                             echo '<script>alert("New Room Added") </script>' ;
                                             }else {

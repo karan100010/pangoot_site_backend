@@ -111,12 +111,11 @@ if(!isset($_SESSION["user"]))
                                             
                                             <th>Name</th>
 											<th>Room type</th>
-                                            <th>Bed Type</th>
+                                            <th>Particulars</th>
                                             <th>Check in</th>
 											<th>Check out</th>
 											<th>No of Room</th>
 											<th>Meal Type</th>
-											
                                             <th>Room Rent</th>
 											<th>Bed Rent</th>
 											<th>Meals </th>
@@ -139,7 +138,7 @@ if(!isset($_SESSION["user"]))
 											if($id % 2 ==1 )
 											{
 												echo"<tr class='gradeC'>
-													<td>".$row['title']." ".$row['fname']." ".$row['lname']."</td>
+													<td>".$row['fname']." ".$row['lname']."</td>
 													<td>".$row['troom']."</td>
 													<td>".$row['tbed']."</td>
 													<td>".$row['cin']."</td>
@@ -157,25 +156,21 @@ if(!isset($_SESSION["user"]))
 											else
 											{
 												echo"<tr class='gradeU'>
-													<td>".$row['title']." ".$row['fname']." ".$row['lname']."</td>
+													<td>".$row['fname']." ".$row['lname']."</td>
 													<td>".$row['troom']."</td>
 													<td>".$row['tbed']."</td>
 													<td>".$row['cin']."</td>
 													<td>".$row['cout']."</td>
 													<td>".$row['nroom']."</td>
 													<td>".$row['meal']."</td>
-													
 													<td>".$row['ttot']."</td>
 													<td>".$row['mepr']."</td>
 													<td>".$row['btot']."</td>
 													<td>".$row['fintot']."</td>
 													<td><a href=print.php?pid=".$id ." <button class='btn btn-primary'> <i class='fa fa-print' ></i> Print</button></td>
 													</tr>";
-											
 											}
-										
 										}
-										
 									?>
                                         
                                     </tbody>

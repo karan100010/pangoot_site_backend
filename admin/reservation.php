@@ -154,6 +154,17 @@ include('db.php')
 												<option value="7">7</option> -->
                                             </select>
                               </div>
+
+                              <div class="form-group">
+                                            <label>Extra bedding</label>
+                                            <select name="ebed"  class="form-control" required>
+												<option value selected ></option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+												
+                                </select>
+                              </div>
+                             
 							  <div class="form-group">
                                             <label>Meal Plan</label>
                                             <select name="meal" class="form-control"required>
