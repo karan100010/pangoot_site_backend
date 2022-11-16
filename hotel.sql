@@ -22,42 +22,6 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
---
-
---
-CREATE TABLE IF NOT EXISTS `meals` (
-`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-`type` varchar(100) DEFAULT NULL,
-`price` int(10),
-PRIMARY KEY (id)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
---
---Table struxture for room details and prices
---
--- CREATE TABLE IF NOT EXISTS `details` (
--- `id` int(10) unsigned NOT NULL,
---   `type` varchar(100) DEFAULT NULL,
---   `Date from` date DEFAULT NULL ,
---   `Date to` date DEFAULT NULL ,
---   `Price` int,
---   `Extra Bed` int,
---   `Lunch/Dinner` int 
--- ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
--- INSERT INTO `details` (`id`, `type`, `Date from` , `Date to`, `Price`, `Extra Bed`, `Lunch/Dinner`) VALUES
--- (1, 'Single Occupancy', '2022/8/1', '2022/12/10', '3000' , '650' , '350'),
--- (2, 'Double Occupancy', '2022/8/1', '2022/12/10', '2200' , '650' , '350'),
--- (3, 'Tripple Occupancy', '2022/8/1', '2022/12/10', '2000' , '650' , '350'),
--- (4, 'Four Occupancy', '2022/8/1', '2022/12/10', '1800' , '650' , '350'),
--- (5, 'Single Occupancy', '2022/12/11', '2022/2/28', '3600' , '650' , '350'),
--- (6, 'Double Occupancy', '2022/12/11', '2022/2/28', '3000' , '650' , '350'),
--- (7, 'Triple Occupancy', '2022/12/11', '2022/2/28', '2760' , '650' , '350'),
--- (8, 'Four Occupancy', '2022/12/11', '2022/2/28', '2500' , '650' , '350'),
--- (9, 'Single Occupancy', '2022/5/1', '2022/7/30', '3750' , '650' , '350'),
--- (10, 'Double Occupancy', '2022/5/1', '2022/7/30', '4000' , '650' , '350'),
--- (11, 'Triple Occupancy', '2022/5/1', '2022/7/30', '3000' , '650' , '350'),
--- (12, 'Four Occupancy', '2022/5/1', '2022/7/30', '2750' , '650' , '350');
 
 --
 -- Table structure for table `contact`
@@ -72,6 +36,11 @@ PRIMARY KEY (id)
 --   `approval` varchar(12) DEFAULT NULL
 -- ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
+CREATE TABLE IF NOT EXISTS `meals` (
+`id` int(10) unsigned NOT NULL ,
+  `type` varchar(100) DEFAULT NULL,
+  `price` int
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 -- --------------------------------------------------------
 
 --
@@ -112,7 +81,7 @@ INSERT INTO `login` (`id`, `usname`, `pass`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `payment` (
-  `id` int(11) DEFAULT NULL AUTO_INCREMENT,
+    `id` int(11) DEFAULT NULL ,
   `fname` varchar(30) DEFAULT NULL,
   `lname` varchar(30) DEFAULT NULL,
   `troom` varchar(30) DEFAULT NULL,
@@ -125,8 +94,7 @@ CREATE TABLE IF NOT EXISTS `payment` (
   `mepr` double(8,2) DEFAULT NULL,
   `meal` varchar(30) DEFAULT NULL,
   `btot` double(8,2) DEFAULT NULL,
-  `noofdays` int(11) DEFAULT NULL,
-  PRIMARY KEY (id)
+  `noofdays` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -136,7 +104,7 @@ CREATE TABLE IF NOT EXISTS `payment` (
 --
 
 CREATE TABLE IF NOT EXISTS `room` (
-`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`id` int(10) unsigned NOT NULL ,
   `type` varchar(15) DEFAULT NULL,
   `particulars` varchar(10) DEFAULT NULL,
   `extra bedding` int ,
@@ -146,15 +114,14 @@ CREATE TABLE IF NOT EXISTS `room` (
   `quard_price` int(11) DEFAULT NULL,
   `no. of rooms` int(11) DEFAULT NULL,
   `no. of free rooms` int(11) DEFAULT NULL,
-  `cusid` int(11) DEFAULT NULL,
-  PRIMARY KEY (id)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `cusid` int(11) DEFAULT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
 --
 -- Dumping data for table `room`
 --
 
--- INSERT INTO `room` (`id`, `type`,`Particulars`, `Date from` , `Date to`, `Price`, `Extra Bed`, `Lunch/Dinner`, `bedding`, `place`, `cusid`) VALUES
+-- INSERT INTO `room` (`id`, `type`, `bedding`, `place`, `cusid`) VALUES
 -- (1, 'Superior Room', 'Single', 'Free', NULL),
 -- (2, 'Superior Room', 'Double', 'Free', NULL),
 -- (3, 'Superior Room', 'Triple', 'Free', NULL),
@@ -178,7 +145,7 @@ CREATE TABLE IF NOT EXISTS `room` (
 --
 
 CREATE TABLE IF NOT EXISTS `roombook` (
-`id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+`id` int(10) unsigned NOT NULL ,
   `FName` text,
   `LName` text,
   `Email` varchar(50) DEFAULT NULL,
@@ -191,19 +158,24 @@ CREATE TABLE IF NOT EXISTS `roombook` (
   `cin` date DEFAULT NULL,
   `cout` date DEFAULT NULL,
   `stat` varchar(15) DEFAULT NULL,
-  `nodays` int(11) DEFAULT NULL,
-  PRIMARY KEY (id)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+  `nodays` int(11) DEFAULT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
 -- Indexes for dumped tables
 --
+--
+-- Indexes for table `meals`
+--
+ALTER TABLE `meals`
+ ADD PRIMARY KEY (`id`);
+
 
 --
 -- Indexes for table `contact`
 --
-ALTER TABLE `contact`
- ADD PRIMARY KEY (`id`);
+-- ALTER TABLE `contact`
+--  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `login`
@@ -214,8 +186,8 @@ ALTER TABLE `login`
 --
 -- Indexes for table `newsletterlog`
 --
-ALTER TABLE `newsletterlog`
- ADD PRIMARY KEY (`id`);
+-- ALTER TABLE `newsletterlog`
+--  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `room`
@@ -236,9 +208,15 @@ ALTER TABLE `roombook`
 --
 -- AUTO_INCREMENT for table `contact`
 --
-ALTER TABLE `contact`
+ALTER TABLE `meals`
 MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+
 --
+-- AUTO_INCREMENT for table `contact`
+--
+-- ALTER TABLE `contact`
+-- MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+-- --
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
@@ -246,8 +224,8 @@ MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `newsletterlog`
 --
-ALTER TABLE `newsletterlog`
-MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+-- ALTER TABLE `newsletterlog`
+-- MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `room`
 --
