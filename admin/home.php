@@ -182,9 +182,8 @@ if(!isset($_SESSION["user"]))
 												<th>".$trow['id']."</th>
 												<th>".$trow['FName']." ".$trow['LName']."</th>
 												<th>".$trow['Email']."</th>
-												// <th>".$trow['Country']."</th>
 												<th>".$trow['TRoom']."</th>
-												<th>".$trow['Bed']."</th>
+												<th>".$trow['Particulars']."</th>
 												<th>".$trow['Meal']."</th>
 												<th>".$trow['cin']."</th>
 												<th>".$trow['cout']."</th>

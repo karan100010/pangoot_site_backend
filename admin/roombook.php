@@ -22,14 +22,15 @@ if(!isset($_SESSION["user"]))
 				$re = mysqli_query($con,$sql);
 				while($row=mysqli_fetch_array($re))
 				{
-					$title = $row['Title'];
+					
 					$fname = $row['FName'];
 					$lname = $row['LName'];
 					$email = $row['Email'];
 					$Phone = $row['Phone'];
 					$troom = $row['TRoom'];
+					$particulars = $row['Particulars'];
 					$nroom = $row['NRoom'];
-					$bed = $row['Bed'];
+					$ebed = $row['Extra bedding'];
 					$non = $row['NRoom'];
 					$meal = $row['Meal'];
 					$cin = $row['cin'];
@@ -167,7 +168,7 @@ if(!isset($_SESSION["user"]))
                                         </tr>
                                         <tr>
                                             <th>Name</th>
-                                            <th><?php echo $title.$fname.$lname; ?> </th>
+                                            <th><?php echo $fname.$lname; ?> </th>
                                             
                                         </tr>
 										<tr>
@@ -196,6 +197,11 @@ if(!isset($_SESSION["user"]))
                                             
                                         </tr>
 										<tr>
+                                            <th>Particulars</th>
+                                            <th><?php echo $particulars; ?></th>
+                                            
+                                        </tr>
+										<tr>
                                             <th>No Of the Room </th>
                                             <th><?php echo $nroom; ?></th>
                                             
@@ -206,8 +212,8 @@ if(!isset($_SESSION["user"]))
                                             
                                         </tr>
 										<tr>
-                                            <th>Bedding </th>
-                                            <th><?php echo $bed; ?></th>
+                                            <th>Extra Bedding </th>
+                                            <th><?php echo $ebed; ?></th>
                                             
                                         </tr>
 										<tr>
@@ -259,7 +265,7 @@ if(!isset($_SESSION["user"]))
                     </div>
 					</div>
 					
-					<?php
+					<!-- <?php
 						$rsql ="select * from room";
 						$rre= mysqli_query($con,$rsql);
 						$r =0 ;
@@ -271,7 +277,7 @@ if(!isset($_SESSION["user"]))
 						{
 							$r = $r + 1;
 							$s = $rrow['type'];
-							$p = $rrow['place'];
+							
 							if($s=="Superior Room" )
 							{
 								$sc = $sc+ 1;
@@ -292,7 +298,7 @@ if(!isset($_SESSION["user"]))
 							
 						
 						}
-						?>
+						?> -->
 						
 						<?php
 						$csql ="select * from payment";
@@ -339,7 +345,8 @@ if(!isset($_SESSION["user"]))
 							
 							<tr>
 								<td><b>Superior Room	 </b></td>
-								<td><button type="button" class="btn btn-primary btn-circle"><?php  
+								<td><button type="button" class="btn btn-primary btn-circle">
+									<?php  
 									$f1 =$sc - $csc;
 									if($f1 <=0 )
 									{	$f1 = "NO";
@@ -409,8 +416,6 @@ if(!isset($_SESSION["user"]))
 								 ?> </button></td> 
 							</tr>
 						</table>
-						
-						s
 						
                         
 						
@@ -493,7 +498,16 @@ if(!isset($_SESSION["user"]))
 												 $type_of_room = 0;       
 														if($troom=="Superior Room")
 														{
+<<<<<<< HEAD
 															$type_of_room = 500;
+=======
+															
+															
+															$type_of_room=320;
+														
+															
+														
+>>>>>>> 2c3ba976f4dd95cb99420649046a65a933539a30
 														
 														}
 														else if($troom=="Deluxe Room")
@@ -558,7 +572,7 @@ if(!isset($_SESSION["user"]))
 														$fintot = $ttot + $mepr + $btot ;
 															
 															//echo "<script type='text/javascript'> alert('$count_date')</script>";
-														$psql = "INSERT INTO `payment`(`id`, `title`, `fname`, `lname`, `troom`, `tbed`, `nroom`, `cin`, `cout`, `ttot`,`meal`, `mepr`, `btot`,`fintot`,`noofdays`) VALUES ('$id','$title','$fname','$lname','$troom','$bed','$nroom','$cin','$cout','$ttot','$meal','$mepr','$btot','$fintot','$days')";
+														$psql = "INSERT INTO `payment`(`id`, `fname`, `lname`, `troom`, `tbed`, `nroom`, `cin`, `cout`, `ttot`,`meal`, `mepr`, `btot`,`fintot`,`noofdays`) VALUES ('$id','$fname','$lname','$troom','$bed','$nroom','$cin','$cout','$ttot','$meal','$mepr','$btot','$fintot','$days')";
 														
 														if(mysqli_query($con,$psql))
 														{	$notfree="NotFree";

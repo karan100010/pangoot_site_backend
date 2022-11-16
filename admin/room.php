@@ -19,6 +19,9 @@ if(!isset($_SESSION["user"]))
     <link href="assets/css/custom-styles.css" rel="stylesheet" />
      <!-- Google Fonts-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+
+   <!-- Importing jQuery -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -65,8 +68,17 @@ if(!isset($_SESSION["user"]))
 					<li>
                         <a  class="active-menu" href="room.php"><i class="fa fa-plus-circle"></i>Add Room</a>
                     </li>
+                    
                     <li>
                         <a  href="roomdel.php"><i class="fa fa-desktop"></i> Delete Room</a>
+                    </li>
+
+                    <li>
+                        <a   href="meals.php"><i class="fa fa-plus-circle"></i>Add meals</a>
+                    </li>
+
+                    <li>
+                        <a  href="mealsdel.php"><i class="fa fa-desktop"></i> Delete meals</a>
                     </li>
 					
 
@@ -100,7 +112,7 @@ if(!isset($_SESSION["user"]))
 						<form name="form" method="post">
                             <div class="form-group">
                                             <label>Type Of Room *</label>
-                                            <select name="troom"  class="form-control" required>
+                                            <select name="troom"  class="form-control"  required>
 												<option value selected ></option>
                                                 <option value="Superior Room">SUPERIOR ROOM</option>
                                                 <option value="Deluxe Room">DELUXE ROOM</option>
@@ -108,18 +120,40 @@ if(!isset($_SESSION["user"]))
 												<option value="Single Room">SINGLE ROOM</option>
                                             </select>
                               </div>
-							  
-								<div class="form-group">
-                                            <label>Bedding Type</label>
-                                            <select name="bed" class="form-control" required>
+                              <div class="form-group">
+                                            <label>Particulars</label>
+                                            <select name="particulars"  class="form-control"id="room_type"  required>
 												<option value selected ></option>
-                                                <option value="Single">Single</option>
-                                                <option value="Double">Double</option>
-												<option value="Triple">Triple</option>
-                                                <option value="Quad">Quad</option>
-												<option value="Triple">None</option>
-                                                                                             
+                                                <option  class="room_options" value="Single occupancy">Single occupancy</option>
+                                                <option class="room_options" value="Double occupancy">Double occupancy</option>
+												<option  class="room_options" value="Triple occupancy">Triple occupancy</option>
+												<option  class="room_options" value="Quard occupancy">Quard occupancy</option>
                                             </select>
+                              </div>
+
+                              <div class="form-group">
+                                            <label name>No. of rooms</label>
+                                           <br>
+                                                <input name="nor" type="int" class="no_of_rooms"><br>
+                                            
+                                            </select>
+                              </div>
+							  <div class="form-group">
+                                            <label>Prices</label>
+                                            <br>
+                                            <input name = "price1" type="int" class="occupancy "name="Single_occupancy" placeholder="single occupancy"><br>
+                                            <br>
+                                            <input name="price2"   type="int"  class= "occupancy" id="Double_occupancy" placeholder="double occupancy"><br>
+                                            <br>
+                                            <input name="price3" type="int" class="occupancy "id="Triple_occupancy" placeholder="triple occupancy"><br>
+                                            <br>
+                                            <input  name="price4" type="int"  class= "occupancy" id="Quard_occupancy"placeholder="quard occupancy"><br>
+                              </div>
+								<div class="form-group">
+                                            <label>Extra Bedding</label>
+                                            <br>
+                                            <input name="bed" type="int"  placeholder="Extra bed charges"><br>
+                                            <br>
                                             
                                </div>
 							 <input type="submit" name="add" value="Add New" class="btn btn-primary"> 
@@ -129,16 +163,24 @@ if(!isset($_SESSION["user"]))
 							 if(isset($_POST['add']))
 							 {
 										$room = $_POST['troom'];
-										$bed = $_POST['bed'];
-										$place = 'Free';
+                                        $particulars = $_POST['particulars'];
+                                        $ebed = $_POST['bed'];
+                                        $price1 = $_POST['price1'];
+                                        $price2 = $_POST['price2'];
+                                        $price3 = $_POST['price3'];
+                                        $price4 = $_POST['price4'];
+                                        $no_of_rooms = $_POST['nor'];
 										
-										$check="SELECT * FROM room WHERE type = '$room' AND bedding = '$bed'";
-										$rs = mysqli_query($con,$check);
-										$data = mysqli_fetch_array($rs, MYSQLI_NUM);
-										if(isset($data[0])){
-                                            if($data[0] > 1) {
+										
+										
+										// $check="SELECT * FROM room WHERE type = '$room'";
+										// $rs = mysqli_query($con,$check);
+										// $data = mysqli_fetch_array($rs, MYSQLI_NUM);
+										// if(isset($data[0])){
+                                            // if($data[0] > 1) {
                                                 // echo "<script type='text/javascript'> alert('Room Already in Exists')</script>";
-                                                $sql ="INSERT INTO `room`( `type`, `bedding`,`place`) VALUES ('$room','$bed','$place')" ;
+                                            $sql ="INSERT INTO `room`( `type`,`particulars`,`extra bedding`,`single_price`,`double_price`,`triple_price`,`quard_price`,`no. of rooms`, `no. of free rooms`) VALUES ('$room','$particulars','$ebed','$price1','$price2','$price3','$price4','$no_of_rooms','$no_of_rooms')" ;
+                                            
                                             if(mysqli_query($con,$sql))
                                             {
                                             echo '<script>alert("New Room Added") </script>' ;
@@ -146,20 +188,20 @@ if(!isset($_SESSION["user"]))
                                                 echo '<script>alert("Sorry ! Check The System") </script>' ;
                                             }
                                                 
-                                            }
-                                    }
-										else
-										{
+                                            // }
+                                        // }
+										// else
+										// {
 							 
 										
-										$sql ="INSERT INTO `room`( `type`, `bedding`,`place`) VALUES ('$room','$bed','$place')" ;
-										if(mysqli_query($con,$sql))
-										{
-										 echo '<script>alert("New Room Added") </script>' ;
-										}else {
-											echo '<script>alert("Sorry ! Check The System") </script>' ;
-										}
-							 }
+										// $sql ="INSERT INTO `room`( `type`, `bedding`,`place`) VALUES ('$room','$bed','$place')" ;
+										// if(mysqli_query($con,$sql))
+										// {
+										//  echo '<script>alert("New Room Added") </script>' ;
+										// }else {
+										// 	echo '<script>alert("Sorry ! Check The System") </script>' ;
+										// }
+							//  }
 							}
 							
 							?>
@@ -189,7 +231,13 @@ if(!isset($_SESSION["user"]))
                                         <tr>
                                             <th>Room ID</th>
                                             <th>Room Type</th>
-											<th>Bedding</th>
+                                            <th>Particulars</th>
+                                            <th>no. of rooms</th>
+                                            <th>Price 1</th>
+                                            <th>Price 2</th>
+                                            <th>Price 3</th>
+                                            <th>Price 4</th>
+											<th>Extra Bedding</th>
                                             
                                         </tr>
                                     </thead>
@@ -204,18 +252,31 @@ if(!isset($_SESSION["user"]))
 												echo "<tr class=odd gradeX>
 													<td>".$row['id']."</td>
 													<td>".$row['type']."</td>
-												   <th>".$row['bedding']."</th>
+                                                    <td>".$row['particulars']."</td>
+                                                    <td>".$row['no. of rooms']."</td>
+												    <td>".$row['single_price']."</td>
+                                                    <td>".$row['double_price']."</td>
+                                                    <td>".$row['triple_price']."</td>
+                                                    <td>".$row['quard_price']."</td>
+                                                    <td>".$row['extra bedding']."</td>
 												</tr>";
 											}
 											else
 											{
-												echo"<tr class=even gradeC>
+												echo "<tr class=odd gradeX>
 													<td>".$row['id']."</td>
 													<td>".$row['type']."</td>
-												   <th>".$row['bedding']."</th>
+                                                    <td>".$row['particulars']."</td>
+                                                    <td>".$row['no. of rooms']."</td>
+												    <td>".$row['single_price']."</td>
+                                                    <td>".$row['double_price']."</td>
+                                                    <td>".$row['triple_price']."</td>
+                                                    <td>".$row['quard_price']."</td>
+                                                    <td>".$row['extra bedding']."</td>
 												</tr>";
 											
 											}
+                                            
 										}
 									?>
                                     </tbody>
@@ -225,15 +286,7 @@ if(!isset($_SESSION["user"]))
                         </div>
                     </div>
                     <!--End Advanced Tables -->
-                    
-                       
-                            
-							  
-							 
-							 
-							  
-							  
-							   
+                    	   
                        </div>
                         
                     </div>
@@ -250,8 +303,44 @@ if(!isset($_SESSION["user"]))
          <!-- /. PAGE WRAPPER  -->
         </div>
      <!-- /. WRAPPER  -->
+     <script> 
+
+var s = document.getElementById('room_type');
+s.addEventListener("change", changeOrg);
+function changeOrg(){
+  var value = s.options[s.selectedIndex].value;
+  switch(value)
+  {
+   case "Double occupancy" :
+    $("#Double_occupancy").removeAttr("disabled");
+    $("#Triple_occupancy").prop('disabled', true);
+    $("#Quard_occupancy").prop('disabled', true);
+    break;
+
+    case "Triple occupancy" :
+    $("#Triple_occupancy").removeAttr("disabled");
+    $("#Double_occupancy").removeAttr("disabled");
+    $("#Quard_occupancy").prop('disabled', true);
+    break;
+
+    case "Quard occupancy" :
+    $("#Quard_occupancy").removeAttr("disabled");
+    $("#Triple_occupancy").removeAttr("disabled");
+    $("#Double_occupancy").removeAttr("disabled");
+    break;
+   default:
+   $("#Double_occupancy").prop('disabled', true);
+   $("#Triple_occupancy").prop('disabled', true);
+   $("#Quard_occupancy").prop('disabled', true);
+  }
+}
+//on page load
+changeOrg();
+
+      </script>
     <!-- JS Scripts-->
-    <!-- jQuery Js -->
+
+    <!-- jQuery Js -->  
     <script src="assets/js/jquery-1.10.2.js"></script>
       <!-- Bootstrap Js -->
     <script src="assets/js/bootstrap.min.js"></script>
