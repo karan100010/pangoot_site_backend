@@ -114,7 +114,7 @@ if(!isset($_SESSION["user"]))
 													<div class='panel panel-primary text-center no-boder bg-color-blue'>
 														<div class='panel-body'>
 															<i class='fa fa-users fa-5x'></i>
-															<h3>".$row['particulats']."</h3>
+															<h3>".$row['particulars']."</h3>
 														</div>
 														<div class='panel-footer back-footer-blue'>
 															".$row['type']."

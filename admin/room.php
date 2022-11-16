@@ -132,7 +132,7 @@ if(!isset($_SESSION["user"]))
                               </div>
 
                               <div class="form-group">
-                                            <label name>No. of rooms</label>
+                                            <label name> rooms</label>
                                            <br>
                                                 <input name="nor" type="int" class="no_of_rooms"><br>
                                             
@@ -170,7 +170,7 @@ if(!isset($_SESSION["user"]))
                                         $price3 = $_POST['price3'];
                                         $price4 = $_POST['price4'];
                                         $no_of_rooms = $_POST['nor'];
-										
+										$place="Free";
 										
 										
 										// $check="SELECT * FROM room WHERE type = '$room'";
@@ -179,8 +179,13 @@ if(!isset($_SESSION["user"]))
 										// if(isset($data[0])){
                                             // if($data[0] > 1) {
                                                 // echo "<script type='text/javascript'> alert('Room Already in Exists')</script>";
-                                            $sql ="INSERT INTO `room`( `type`,`particulars`,`extra bedding`,`single_price`,`double_price`,`triple_price`,`quard_price`,`no. of rooms`, `no. of free rooms`) VALUES ('$room','$particulars','$ebed','$price1','$price2','$price3','$price4','$no_of_rooms','$no_of_rooms')" ;
-                                            
+                                            // for i in l    
+                                            $sql ="INSERT INTO `room`( `type`,`particulars`,`extra bedding`,`single_price`,`double_price`,`triple_price`,`quard_price`,`place`) VALUES ('$room','$particulars','$ebed','$price1','$price2','$price3','$price4','$place')";
+                                            for($i=0;$i<$no_of_rooms;$i++){
+                                                $result = mysqli_query($con,$sql);
+                                            }
+                            
+                                          
                                             if(mysqli_query($con,$sql))
                                             {
                                             echo '<script>alert("New Room Added") </script>' ;
@@ -188,7 +193,7 @@ if(!isset($_SESSION["user"]))
                                                 echo '<script>alert("Sorry ! Check The System") </script>' ;
                                             }
                                                 
-                                            // }
+                                            // 
                                         // }
 										// else
 										// {
@@ -232,7 +237,7 @@ if(!isset($_SESSION["user"]))
                                             <th>Room ID</th>
                                             <th>Room Type</th>
                                             <th>Particulars</th>
-                                            <th>no. of rooms</th>
+                    
                                             <th>Price 1</th>
                                             <th>Price 2</th>
                                             <th>Price 3</th>
@@ -253,7 +258,7 @@ if(!isset($_SESSION["user"]))
 													<td>".$row['id']."</td>
 													<td>".$row['type']."</td>
                                                     <td>".$row['particulars']."</td>
-                                                    <td>".$row['no. of rooms']."</td>
+                                                 
 												    <td>".$row['single_price']."</td>
                                                     <td>".$row['double_price']."</td>
                                                     <td>".$row['triple_price']."</td>
@@ -267,7 +272,7 @@ if(!isset($_SESSION["user"]))
 													<td>".$row['id']."</td>
 													<td>".$row['type']."</td>
                                                     <td>".$row['particulars']."</td>
-                                                    <td>".$row['no. of rooms']."</td>
+                                               
 												    <td>".$row['single_price']."</td>
                                                     <td>".$row['double_price']."</td>
                                                     <td>".$row['triple_price']."</td>

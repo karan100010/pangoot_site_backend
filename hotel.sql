@@ -24,17 +24,17 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contact`
+-- Table structure for table ``
 --
 
--- CREATE TABLE IF NOT EXISTS `contact` (
--- `id` int(10) unsigned NOT NULL,
---   `fullname` varchar(100) DEFAULT NULL,
---   `phoneno` int(10) DEFAULT NULL,
---   `email` text,
---   `cdate` date DEFAULT NULL,
---   `approval` varchar(12) DEFAULT NULL
--- ) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+CREATE TABLE IF NOT EXISTS `contact` (
+`id` int(10) unsigned NOT NULL,
+  `fullname` varchar(100) DEFAULT NULL,
+  `phoneno` int(10) DEFAULT NULL,
+  `email` text,
+  `cdate` date DEFAULT NULL,
+  `approval` varchar(12) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
 
 CREATE TABLE IF NOT EXISTS `meals` (
 `id` int(10) unsigned NOT NULL ,
@@ -112,8 +112,7 @@ CREATE TABLE IF NOT EXISTS `room` (
   `double_price` int(11) DEFAULT NULL,
   `triple_price` int(11) DEFAULT NULL,
   `quard_price` int(11) DEFAULT NULL,
-  `no. of rooms` int(11) DEFAULT NULL,
-  `no. of free rooms` int(11) DEFAULT NULL,
+  `place` varchar(10) DEFAULT NULL,
   `cusid` int(11) DEFAULT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
@@ -169,17 +168,13 @@ CREATE TABLE IF NOT EXISTS `roombook` (
 --
 ALTER TABLE `meals`
  ADD PRIMARY KEY (`id`);
-
-
 --
--- Indexes for table `contact`
+-- Indexes for table ``
 --
--- ALTER TABLE `contact`
---  ADD PRIMARY KEY (`id`);
-
+ALTER TABLE `contact`
+ ADD PRIMARY KEY (`id`);
 --
 -- Indexes for table `login`
---
 ALTER TABLE `login`
  ADD PRIMARY KEY (`id`);
 
@@ -206,16 +201,16 @@ ALTER TABLE `roombook`
 --
 
 --
--- AUTO_INCREMENT for table `contact`
+-- AUTO_INCREMENT for table ``
 --
 ALTER TABLE `meals`
 MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `contact`
+-- AUTO_INCREMENT for table ``
 --
--- ALTER TABLE `contact`
--- MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
+ALTER TABLE `contact`
+MODIFY `id` int(10) unsigned NOT NULL AUTO_INCREMENT;
 -- --
 -- AUTO_INCREMENT for table `login`
 --
