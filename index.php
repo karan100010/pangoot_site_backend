@@ -40,7 +40,7 @@ include('db.php');
 			<div class="contact-bnr-w3-agile">
 				<ul>
 					<li><i class="fa fa-envelope" aria-hidden="true"></i><a href="mailto:info@example.com">info@laserenethecottage.com</a></li>
-					<li><i class="fa fa-phone" aria-hidden="true"></i>+91 - 8630690077 / +91 - 9318321161</li>	
+					<li><i class="fa fa-phone" aria-hidden="true"></i>+91- 8920315383 / +91 - 9318321161</li>	
 					<!-- <li class="s-bar">
 						<div class="search">
 							<input class="search_box" type="checkbox" id="search_box">
@@ -748,7 +748,7 @@ include('db.php');
 		</div> -->
 		<div class="col-lg-6 col-md-6 col-sm-6 contact-w3-agile1" data-aos="flip-right">
 			<h4>Connect With Us</h4>
-			<p class="contact-agile1"><strong>Phone :</strong>+91 - 8630690077 / +91 - 9318321161</p>
+			<p class="contact-agile1"><strong>Phone :</strong>+91- 8920315383 / +91 - 9318321161</p>
 			<p class="contact-agile1"><strong>Email :</strong> <a href="mailto:name@example.com">info@laserenethecottage.com</a></p>
 			<p class="contact-agile1"><strong>Address :</strong> Vill. Baggar Talla, Po. Pangot, Dist. Nainital, Uttarakhand, India - 263001</p>
 																

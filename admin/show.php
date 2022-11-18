@@ -193,7 +193,7 @@ tr:hover .cut { opacity: 1; }
 			<address >
 				<p>Laserene Cottage</p>
 				<p>Vill. Baggar Talla,<br> Po. Pangot, Dist. Nainital,<br> Uttarakhand,<br> India - 263001</p>
-				<p>+91 - 8630690077 / +91 - 9318321161</p>
+				<p>+91- 8920315383 / +91 - 9318321161</p>
 			</address>
 			<!-- <span><img alt="" src="assets/img/sun.png"></span> -->
 		</header>
@@ -265,7 +265,7 @@ tr:hover .cut { opacity: 1; }
 		<aside>
 			<h1><span >Contact us</span></h1>
 			<div >
-				<p align="center">Email :- info@laserenethecottage.com || Web :- www.laserenethecottage.com || <br>Phone :- +91 - 8630690077 / +91 - 9318321161 </p>
+				<p align="center">Email :- info@laserenethecottage.com || Web :- www.laserenethecottage.com || <br>Phone :- +91- 8920315383 / +91 - 9318321161 </p>
 			</div>
 		</aside>
 	</body>
