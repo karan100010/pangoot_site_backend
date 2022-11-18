@@ -221,9 +221,9 @@ include('db.php');
                             <h3 class="title-w3-agileits title-black-wthree">About Us</h3> 
 						   <p class="about-para-w3ls">A beautiful emerald cottage surrounded by green hills and a web of walking tracks—there are plenty of picturesque places to visit and things to do in LASERENE THE COTTAGE. Nainital, located in the Kumaon region of Uttarakhand, often termed as “queen of lakes.” This is one of the most sought-after hill stations of North India adorned with a combination of picturesque Himalayan hills and lakes.
 						   </p>
-						   <img src="images/lawn.jpg" class="img-responsive" alt="lawn">
+						   <img src="images/My Project.jpg" class="img-responsive" alt="">
 										<div class="w3l-slider-img">
-											<img src="images/g10.jpg" class="img-responsive" alt="lawn">
+											<img src="images/g10.jpg" class="img-responsive" alt="">
 										</div>
                                        <div class="w3ls-info-about">
 										    <h4>You'll love all the amenities we offer!</h4>

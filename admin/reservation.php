@@ -159,6 +159,7 @@ include('db.php')
                                             <label>Extra bedding</label>
                                             <select name="ebed"  class="form-control" required>
 												<option value selected ></option>
+                                                <option value="0">0</option>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
 												
@@ -169,6 +170,7 @@ include('db.php')
                                             <label>Meal Plan</label>
                                             <select name="meal" class="form-control"required>
 												<option value selected ></option>
+                                                <option value="NULL">None</option>
                                                 <option value="Lunch">Lunch</option>
                                                 <option value="Dinner">Dinner</option>
 												<option value="Both">Both</option>
