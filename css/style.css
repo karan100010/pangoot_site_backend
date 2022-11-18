@@ -3336,3 +3336,67 @@ color: #fff !important;
 	border-radius: 16px;
     color: white;
 }
+.policy-head{
+	color: white;
+}
+/*---------------------
+   About
+-----------------------*/
+
+.about {
+	padding-bottom: 60px;
+}
+
+.about__content {
+	margin-bottom: 45px;
+}
+
+.about__content .section-title {
+	text-align: left;
+}
+
+.about__text p {
+	color: #707070;
+}
+
+.about__text p:first-child {
+	font-size: 18px;
+	color: #111111;
+	line-height: 30px;
+	margin-bottom: 25px;
+}
+
+/*---------------------
+  Helper CSS
+-----------------------*/
+
+.section-title {
+	margin-bottom: 55px;
+	text-align: center;
+}
+
+.section-title h5 {
+	color: #E9AD28;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	margin-bottom: 20px;
+}
+
+.section-title h2 {
+	font-size: 44px;
+	color: #19191A;
+}
+
+.set-bg {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: top center;
+}
+
+.spad {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+.line-height-class{
+	line-height: 2;
+}

@@ -767,7 +767,7 @@ include('db.php');
 </section>
 <!-- /contact -->
 			<div class="copy">
-		        <p>© 2022 LASERENE THE COTTAGE . All Rights Reserved | Design by <a href="index.php">SUNRISE</a> </p>
+		        <p>© 2022 LASERENE THE COTTAGE . All Rights Reserved | Design by SUNRISE | <a href="./privacypolicy.html">Privacy Policy</a> | <a href="./TermofUse.html">Terms Of Use</a> | <a href="./CancelRefundPolicy.html">Cancellation & Refund Policy</a> | <a href="./ShippingDeliveryPolicy.html">Shipping & Delivery Policy</a> </p>
 		    </div>
 <!--/footer -->
 <!-- js -->
